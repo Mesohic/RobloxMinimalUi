@@ -1139,4 +1139,12 @@ function MinimalUI:CreateNotification(title, message, duration, type)
 end
 
 -- Return the library
-return MinimalUI
+local window = MinimalUI.new("Minimal UI Demo", UDim2.new(0.5, -200, 0.5, -150))
+
+local mainSection = window:AddSection("Main Features")
+
+mainSection:AddButton("Click Me", function()
+    window:CreateNotification("Button Clicked", "You clicked the button!", 3, "info")
+end)
+
+-- (Continue with your toggles, sliders, dropdowns, etc. right here)
