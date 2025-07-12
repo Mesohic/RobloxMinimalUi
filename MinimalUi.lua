@@ -700,3 +700,443 @@ function MinimalUI:AddSection(title)
         label.Name = "Label"
         label.Size = UDim2.new(1, -50, 1, 0)
         label.Position = UDim2.new(0, 10, 0, 0)
+        label.BackgroundTransparency = 1
+        label.Font = Enum.Font[config.font]
+        label.TextSize = config.textSize
+        label.TextColor3 = config.colors.text
+        label.TextXAlignment = Enum.TextXAlignment.Left
+        label.Text = text
+        label.Parent = container
+        
+        -- Color display
+        local colorDisplay = Instance.new("Frame")
+        colorDisplay.Name = "ColorDisplay"
+        colorDisplay.Size = UDim2.new(0, 24, 0, 24)
+        colorDisplay.Position = UDim2.new(1, -34, 0.5, -12)
+        colorDisplay.BackgroundColor3 = default
+        colorDisplay.BorderSizePixel = 0
+        colorDisplay.Parent = container
+        
+        -- Color display corner
+        local displayCorner = Instance.new("UICorner")
+        displayCorner.CornerRadius = UDim.new(0, 4)
+        displayCorner.Parent = colorDisplay
+        
+        -- Color picker UI (simplified for this example)
+        local pickerOpen = false
+        local pickerUI = Instance.new("Frame")
+        pickerUI.Name = "ColorPickerUI"
+        pickerUI.Size = UDim2.new(0, 200, 0, 220)
+        pickerUI.Position = UDim2.new(1, 10, 0, 0)
+        pickerUI.BackgroundColor3 = config.colors.background
+        pickerUI.BorderSizePixel = 0
+        pickerUI.Visible = false
+        pickerUI.ZIndex = 10
+        pickerUI.Parent = container
+        
+        -- Picker corner
+        local pickerCorner = Instance.new("UICorner")
+        pickerCorner.CornerRadius = config.cornerRadius
+        pickerCorner.Parent = pickerUI
+        
+        -- Color palette (simplified)
+        local palette = Instance.new("ImageLabel")
+        palette.Name = "Palette"
+        palette.Size = UDim2.new(1, -20, 0, 150)
+        palette.Position = UDim2.new(0, 10, 0, 10)
+        palette.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+        palette.BorderSizePixel = 0
+        palette.Image = "rbxassetid://6523286724"
+        palette.ZIndex = 11
+        palette.Parent = pickerUI
+        
+        -- Hue slider
+        local hueSlider = Instance.new("ImageLabel")
+        hueSlider.Name = "HueSlider"
+        hueSlider.Size = UDim2.new(1, -20, 0, 20)
+        hueSlider.Position = UDim2.new(0, 10, 0, 170)
+        hueSlider.BackgroundTransparency = 1
+        hueSlider.Image = "rbxassetid://6523291212"
+        hueSlider.ZIndex = 11
+        hueSlider.Parent = pickerUI
+        
+        -- Hover effect
+        container.MouseEnter:Connect(function()
+            container.BackgroundColor3 = config.colors.elementHover
+        end)
+        
+        container.MouseLeave:Connect(function()
+            container.BackgroundColor3 = config.colors.elementBg
+        end)
+        
+        -- Toggle color picker
+        colorDisplay.InputBegan:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseButton1 then
+                pickerOpen = not pickerOpen
+                pickerUI.Visible = pickerOpen
+            end
+        end)
+        
+        -- Close picker when clicking elsewhere
+        game:GetService("UserInputService").InputBegan:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseButton1 and pickerOpen then
+                local mousePos = game:GetService("UserInputService"):GetMouseLocation()
+                if not (
+                    mousePos.X >= pickerUI.AbsolutePosition.X and
+                    mousePos.Y >= pickerUI.AbsolutePosition.Y and
+                    mousePos.X <= pickerUI.AbsolutePosition.X + pickerUI.AbsoluteSize.X and
+                    mousePos.Y <= pickerUI.AbsolutePosition.Y + pickerUI.AbsoluteSize.Y
+                ) and not (
+                    mousePos.X >= colorDisplay.AbsolutePosition.X and
+                    mousePos.Y >= colorDisplay.AbsolutePosition.Y and
+                    mousePos.X <= colorDisplay.AbsolutePosition.X + colorDisplay.AbsoluteSize.X and
+                    mousePos.Y <= colorDisplay.AbsolutePosition.Y + colorDisplay.AbsoluteSize.Y
+                ) then
+                    pickerOpen = false
+                    pickerUI.Visible = false
+                end
+            end
+        end)
+        
+        -- Simplified color selection
+        palette.InputBegan:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseButton1 then
+                local relativeX = math.clamp((input.Position.X - palette.AbsolutePosition.X) / palette.AbsoluteSize.X, 0, 1)
+                local relativeY = math.clamp((input.Position.Y - palette.AbsolutePosition.Y) / palette.AbsoluteSize.Y, 0, 1)
+                
+                -- Sample color from palette (simplified)
+                local hue = 1 - (hueSlider.ImageColor3.R + hueSlider.ImageColor3.G + hueSlider.ImageColor3.B) / 3
+                local saturation = relativeX
+                local value = 1 - relativeY
+                
+                local color = Color3.fromHSV(hue, saturation, value)
+                colorDisplay.BackgroundColor3 = color
+                
+                if callback then callback(color) end
+            end
+        end)
+        
+        hueSlider.InputBegan:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseButton1 then
+                local relativeX = math.clamp((input.Position.X - hueSlider.AbsolutePosition.X) / hueSlider.AbsoluteSize.X, 0, 1)
+                
+                -- Set hue (simplified)
+                local hue = relativeX
+                palette.BackgroundColor3 = Color3.fromHSV(hue, 1, 1)
+                
+                -- Update color
+                local saturation = 0.5
+                local value = 0.5
+                local color = Color3.fromHSV(hue, saturation, value)
+                colorDisplay.BackgroundColor3 = color
+                
+                if callback then callback(color) end
+            end
+        end)
+        
+        container.Parent = section.container
+        return {
+            instance = container,
+            setValue = function(color)
+                colorDisplay.BackgroundColor3 = color
+            end
+        }
+    end
+    
+    function section:AddTextbox(text, placeholder, default, callback)
+        placeholder = placeholder or ""
+        default = default or ""
+        
+        -- Textbox container
+        local container = Instance.new("Frame")
+        container.Name = text .. "Textbox"
+        container.Size = UDim2.new(1, 0, 0, 60)
+        container.BackgroundColor3 = config.colors.elementBg
+        container.BorderSizePixel = 0
+        
+        -- Add corner radius
+        local corner = Instance.new("UICorner")
+        corner.CornerRadius = config.cornerRadius
+        corner.Parent = container
+        
+        -- Label
+        local label = Instance.new("TextLabel")
+        label.Name = "Label"
+        label.Size = UDim2.new(1, -20, 0, 20)
+        label.Position = UDim2.new(0, 10, 0, 5)
+        label.BackgroundTransparency = 1
+        label.Font = Enum.Font[config.font]
+        label.TextSize = config.textSize
+        label.TextColor3 = config.colors.text
+        label.TextXAlignment = Enum.TextXAlignment.Left
+        label.Text = text
+        label.Parent = container
+        
+        -- Textbox
+        local textbox = Instance.new("TextBox")
+        textbox.Name = "Input"
+        textbox.Size = UDim2.new(1, -20, 0, 30)
+        textbox.Position = UDim2.new(0, 10, 0, 25)
+        textbox.BackgroundColor3 = Color3.fromRGB(60, 60, 65)
+        textbox.BorderSizePixel = 0
+        textbox.Font = Enum.Font[config.font]
+        textbox.TextSize = config.textSize
+        textbox.TextColor3 = config.colors.text
+        textbox.PlaceholderText = placeholder
+        textbox.PlaceholderColor3 = config.colors.subText
+        textbox.Text = default
+        textbox.ClearTextOnFocus = false
+        
+        -- Add padding to text
+        local textPadding = Instance.new("UIPadding")
+        textPadding.PaddingLeft = UDim.new(0, 10)
+        textPadding.Parent = textbox
+        
+        -- Textbox corner
+        local textboxCorner = Instance.new("UICorner")
+        textboxCorner.CornerRadius = UDim.new(0, 4)
+        textboxCorner.Parent = textbox
+        
+        -- Callback on focus lost
+        textbox.FocusLost:Connect(function(enterPressed)
+            if callback then callback(textbox.Text, enterPressed) end
+        end)
+        
+        container.Parent = section.container
+        return {
+            instance = container,
+            setValue = function(value)
+                textbox.Text = value
+            }
+        }
+    end
+    
+    function section:AddKeybind(text, default, callback, changedCallback)
+        default = default or Enum.KeyCode.Unknown
+        
+        -- Keybind container
+        local container = Instance.new("Frame")
+        container.Name = text .. "Keybind"
+        container.Size = UDim2.new(1, 0, 0, 36)
+        container.BackgroundColor3 = config.colors.elementBg
+        container.BorderSizePixel = 0
+        
+        -- Add corner radius
+        local corner = Instance.new("UICorner")
+        corner.CornerRadius = config.cornerRadius
+        corner.Parent = container
+        
+        -- Label
+        local label = Instance.new("TextLabel")
+        label.Name = "Label"
+        label.Size = UDim2.new(1, -80, 1, 0)
+        label.Position = UDim2.new(0, 10, 0, 0)
+        label.BackgroundTransparency = 1
+        label.Font = Enum.Font[config.font]
+        label.TextSize = config.textSize
+        label.TextColor3 = config.colors.text
+        label.TextXAlignment = Enum.TextXAlignment.Left
+        label.Text = text
+        label.Parent = container
+        
+        -- Keybind button
+        local keybindBtn = Instance.new("TextButton")
+        keybindBtn.Name = "KeybindButton"
+        keybindBtn.Size = UDim2.new(0, 70, 0, 24)
+        keybindBtn.Position = UDim2.new(1, -80, 0.5, -12)
+        keybindBtn.BackgroundColor3 = Color3.fromRGB(60, 60, 65)
+        keybindBtn.BorderSizePixel = 0
+        keybindBtn.Font = Enum.Font[config.font]
+        keybindBtn.TextSize = config.textSize
+        keybindBtn.TextColor3 = config.colors.text
+        keybindBtn.Text = default ~= Enum.KeyCode.Unknown and default.Name or "None"
+        keybindBtn.AutoButtonColor = false
+        
+        -- Keybind button corner
+        local btnCorner = Instance.new("UICorner")
+        btnCorner.CornerRadius = UDim.new(0, 4)
+        btnCorner.Parent = keybindBtn
+        
+        -- Listening for key indicator
+        local listening = false
+        
+        -- Hover effect
+        container.MouseEnter:Connect(function()
+            container.BackgroundColor3 = config.colors.elementHover
+        end)
+        
+        container.MouseLeave:Connect(function()
+            container.BackgroundColor3 = config.colors.elementBg
+        end)
+        
+        -- Button click to start listening
+        keybindBtn.MouseButton1Click:Connect(function()
+            listening = true
+            keybindBtn.Text = "..."
+        end)
+        
+        -- Key detection
+        game:GetService("UserInputService").InputBegan:Connect(function(input)
+            if listening and input.UserInputType == Enum.UserInputType.Keyboard then
+                listening = false
+                
+                local key = input.KeyCode
+                keybindBtn.Text = key.Name
+                
+                if changedCallback then changedCallback(key) end
+            elseif not listening and input.UserInputType == Enum.UserInputType.Keyboard then
+                if input.KeyCode.Name == keybindBtn.Text then
+                    if callback then callback() end
+                end
+            end
+        end)
+        
+        container.Parent = section.container
+        return {
+            instance = container,
+            setValue = function(key)
+                keybindBtn.Text = key.Name
+            }
+        }
+    end
+    
+    function section:AddLabel(text)
+        -- Label container
+        local container = Instance.new("Frame")
+        container.Name = "Label"
+        container.Size = UDim2.new(1, 0, 0, 30)
+        container.BackgroundTransparency = 1
+        
+        -- Label
+        local label = Instance.new("TextLabel")
+        label.Name = "Text"
+        label.Size = UDim2.new(1, 0, 1, 0)
+        label.BackgroundTransparency = 1
+        label.Font = Enum.Font[config.font]
+        label.TextSize = config.textSize
+        label.TextColor3 = config.colors.subText
+        label.Text = text
+        label.TextWrapped = true
+        label.Parent = container
+        
+        container.Parent = section.container
+        return {
+            instance = container,
+            setText = function(newText)
+                label.Text = newText
+            end
+        }
+    end
+    
+    return section
+end
+
+-- Add notification system
+function MinimalUI:CreateNotification(title, message, duration, type)
+    title = title or "Notification"
+    message = message or ""
+    duration = duration or 3
+    type = type or "info" -- info, success, warning, error
+    
+    -- Determine color based on type
+    local typeColor
+    if type == "success" then
+        typeColor = config.colors.success
+    elseif type == "warning" then
+        typeColor = config.colors.warning
+    elseif type == "error" then
+        typeColor = config.colors.error
+    else
+        typeColor = config.colors.accent
+    end
+    
+    -- Create notification container
+    local notification = Instance.new("Frame")
+    notification.Name = "Notification"
+    notification.Size = UDim2.new(0, 260, 0, 80)
+    notification.Position = UDim2.new(1, 20, 0.5, -40)
+    notification.BackgroundColor3 = config.colors.background
+    notification.BorderSizePixel = 0
+    notification.AnchorPoint = Vector2.new(0, 0.5)
+    
+    -- Add corner radius
+    local corner = Instance.new("UICorner")
+    corner.CornerRadius = config.cornerRadius
+    corner.Parent = notification
+    
+    -- Add shadow
+    local shadow = Instance.new("ImageLabel")
+    shadow.Name = "Shadow"
+    shadow.BackgroundTransparency = 1
+    shadow.Position = UDim2.new(0, -15, 0, -15)
+    shadow.Size = UDim2.new(1, 30, 1, 30)
+    shadow.ZIndex = -1
+    shadow.Image = "rbxassetid://5554236805"
+    shadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
+    shadow.ImageTransparency = 0.6
+    shadow.ScaleType = Enum.ScaleType.Slice
+    shadow.SliceCenter = Rect.new(23, 23, 277, 277)
+    shadow.Parent = notification
+    
+    -- Colored bar
+    local bar = Instance.new("Frame")
+    bar.Name = "Bar"
+    bar.Size = UDim2.new(0, 4, 1, 0)
+    bar.BackgroundColor3 = typeColor
+    bar.BorderSizePixel = 0
+    bar.Parent = notification
+    
+    -- Bar corner
+    local barCorner = Instance.new("UICorner")
+    barCorner.CornerRadius = UDim.new(0, 4)
+    barCorner.Parent = bar
+    
+    -- Title
+    local titleLabel = Instance.new("TextLabel")
+    titleLabel.Name = "Title"
+    titleLabel.Size = UDim2.new(1, -20, 0, 25)
+    titleLabel.Position = UDim2.new(0, 14, 0, 5)
+    titleLabel.BackgroundTransparency = 1
+    titleLabel.Font = Enum.Font[config.font]
+    titleLabel.TextSize = config.titleSize - 2
+    titleLabel.TextColor3 = config.colors.text
+    titleLabel.TextXAlignment = Enum.TextXAlignment.Left
+    titleLabel.Text = title
+    titleLabel.Parent = notification
+    
+    -- Message
+    local messageLabel = Instance.new("TextLabel")
+    messageLabel.Name = "Message"
+    messageLabel.Size = UDim2.new(1, -20, 1, -35)
+    messageLabel.Position = UDim2.new(0, 14, 0, 30)
+    messageLabel.BackgroundTransparency = 1
+    messageLabel.Font = Enum.Font[config.font]
+    messageLabel.TextSize = config.textSize
+    messageLabel.TextColor3 = config.colors.subText
+    messageLabel.TextXAlignment = Enum.TextXAlignment.Left
+    messageLabel.TextYAlignment = Enum.TextYAlignment.Top
+    messageLabel.TextWrapped = true
+    messageLabel.Text = message
+    messageLabel.Parent = notification
+    
+    -- Add to screen
+    local notifGui = Instance.new("ScreenGui")
+    notifGui.Name = "Notification"
+    notifGui.ResetOnSpawn = false
+    notifGui.Parent = game:GetService("CoreGui")
+    notification.Parent = notifGui
+    
+    -- Animation
+    notification:TweenPosition(UDim2.new(1, -280, 0.5, -40), "Out", "Quad", 0.4, true)
+    
+    -- Remove after duration
+    spawn(function()
+        wait(duration)
+        notification:TweenPosition(UDim2.new(1, 20, 0.5, -40), "Out", "Quad", 0.4, true, function()
+            notifGui:Destroy()
+        end)
+    end)
+end
+
+-- Return the library
+return MinimalUI
