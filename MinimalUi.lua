@@ -215,7 +215,6 @@ dragButton.Size = UDim2.new(0, 30, 0, 30)
 dragButton.Position = UDim2.new(1, -105, 0, 5)
 dragButton.BackgroundColor3 = COLORS.SECTION
 dragButton.BorderSizePixel = 0
-dragButton.Image = "rbxassetid://7733715400" -- Drag handle icon (you can replace with your own)
 dragButton.ImageColor3 = COLORS.TEXT
 dragButton.Transparency = 0.5
 dragButton.Parent = titleBar
