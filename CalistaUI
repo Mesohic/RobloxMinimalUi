@@ -1769,3 +1769,45 @@ Library.TextLabel_2.TextColor3 = Color3.fromRGB(173, 173, 173)
 Library.TextLabel_2.TextScaled = true
 Library.TextLabel_2.TextSize = 14.000
 Library.TextLabel_2.TextWrapped = true
+
+local UIS = game:GetService("UserInputService")
+
+local function makeDraggable(frame)
+	local dragging, dragInput, startPos, startOffset
+
+	frame.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			startPos = input.Position
+			startOffset = frame.Position
+
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+
+	frame.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+
+	UIS.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			local delta = input.Position - startPos
+			frame.Position = UDim2.new(
+				startOffset.X.Scale,
+				startOffset.X.Offset + delta.X,
+				startOffset.Y.Scale,
+				startOffset.Y.Offset + delta.Y
+			)
+		end
+	end)
+end
+
+makeDraggable(Library.Main)
+makeDraggable(Library.ToggleWindow)
+makeDraggable(Library.ButtonWindow)
