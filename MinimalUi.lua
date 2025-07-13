@@ -167,36 +167,6 @@ function UILibrary:CreateWindow(title)
         end
     end)
     
-    -- Make window draggable
-    local isDragging = false
-    local dragStart, startPos
-    
-    titleBar.InputBegan:Connect(function(input)
-        if input.UserInputType == Enum.UserInputType.MouseButton1 then
-            isDragging = true
-            dragStart = input.Position
-            startPos = main.Position
-        end
-    end)
-    
-    UserInputService.InputChanged:Connect(function(input)
-        if isDragging and input.UserInputType == Enum.UserInputType.MouseMovement then
-            local delta = input.Position - dragStart
-            main.Position = UDim2.new(
-                startPos.X.Scale,
-                startPos.X.Offset + delta.X,
-                startPos.Y.Scale,
-                startPos.Y.Offset + delta.Y
-            )
-        end
-    end)
-    
-    UserInputService.InputEnded:Connect(function(input)
-        if input.UserInputType == Enum.UserInputType.MouseButton1 then
-            isDragging = false
-        end
-    end)
-    
     -- Button event handlers
     minimizeButton.MouseButton1Click:Connect(function()
         window:Toggle()
@@ -215,7 +185,7 @@ dragButton.Size = UDim2.new(0, 30, 0, 30)
 dragButton.Position = UDim2.new(1, -105, 0, 5)
 dragButton.BackgroundColor3 = COLORS.SECTION
 dragButton.BorderSizePixel = 0
-dragButton.Image = "rbxassetid://7733715400" -- Drag handle icon (you can replace with your own)
+dragButton.Image = "rbxassetid://
 dragButton.ImageColor3 = COLORS.TEXT
 dragButton.Transparency = 0.5
 dragButton.Parent = titleBar
