@@ -1,0 +1,43 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Mesohic/RobloxMinimalUi/refs/heads/main/CalistaUI"))()
+
+-- Create window
+local Window = Library.new("My Script")
+
+-- Create tabs
+local MainTab = Window:CreateTab("Main")
+local SettingsTab = Window:CreateTab("Settings")
+
+-- Create toggle
+local MyToggle = MainTab:CreateToggle({
+    Name = "Feature Toggle",
+    Default = false,
+    Callback = function(Value)
+        print("Toggle is now:", Value)
+    end
+})
+
+-- Create slider
+local MySlider = MainTab:CreateSlider({
+    Name = "Speed",
+    Min = 0,
+    Max = 100,
+    Default = 50,
+    Callback = function(Value)
+        print("Slider value:", Value)
+    end
+})
+
+-- Create dropdown
+local MyDropdown = MainTab:CreateDropdown({
+    Name = "Select Option",
+    Options = {"Option 1", "Option 2", "Option 3"},
+    Default = "Option 1",
+    Callback = function(Option)
+        print("Selected:", Option)
+    end
+})
+
+-- You can update elements
+MyToggle:Set(true)
+MySlider:Set(75)
+MyDropdown:Set("Option 2")
