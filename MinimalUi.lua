@@ -16,7 +16,9 @@ local COLORS = {
     TEXT = Color3.fromRGB(240, 240, 245),
     ACCENT = Color3.fromRGB(85, 170, 255),
     TOGGLE_OFF = Color3.fromRGB(80, 80, 85),
-    TOGGLE_ON = Color3.fromRGB(85, 170, 255)
+    TOGGLE_ON = Color3.fromRGB(85, 170, 255),
+    MINIMIZE = Color3.fromRGB(255, 200, 50),
+    CLOSE = Color3.fromRGB(255, 80, 80)
 }
 
 local TWEEN_INFO = TweenInfo.new(0.2, Enum.EasingStyle.Quad)
@@ -64,6 +66,11 @@ function UILibrary:CreateWindow(title)
     main.Parent = screenGui
     createCorner(main, 8)
     
+    -- Window state properties
+    window.Minimized = false
+    window.ExpandedSize = main.Size
+    window.MinimizedSize = UDim2.new(0, main.Size.X.Offset, 0, 40)
+    
     -- Title bar
     local titleBar = Instance.new("Frame")
     titleBar.Name = "TitleBar"
@@ -83,7 +90,7 @@ function UILibrary:CreateWindow(title)
     
     -- Title text
     local titleText = Instance.new("TextLabel")
-    titleText.Size = UDim2.new(1, -20, 1, 0)
+    titleText.Size = UDim2.new(1, -120, 1, 0)
     titleText.Position = UDim2.new(0, 15, 0, 0)
     titleText.BackgroundTransparency = 1
     titleText.Font = Enum.Font.GothamBold
@@ -92,6 +99,32 @@ function UILibrary:CreateWindow(title)
     titleText.TextXAlignment = Enum.TextXAlignment.Left
     titleText.Text = title or "UI Library"
     titleText.Parent = titleBar
+    
+    -- Minimize button
+    local minimizeButton = Instance.new("TextButton")
+    minimizeButton.Size = UDim2.new(0, 30, 0, 30)
+    minimizeButton.Position = UDim2.new(1, -70, 0, 5)
+    minimizeButton.BackgroundColor3 = COLORS.MINIMIZE
+    minimizeButton.BorderSizePixel = 0
+    minimizeButton.Text = "-"
+    minimizeButton.TextSize = 18
+    minimizeButton.Font = Enum.Font.GothamBold
+    minimizeButton.TextColor3 = COLORS.TEXT
+    minimizeButton.Parent = titleBar
+    createCorner(minimizeButton, 6)
+    
+    -- Close button
+    local closeButton = Instance.new("TextButton")
+    closeButton.Size = UDim2.new(0, 30, 0, 30)
+    closeButton.Position = UDim2.new(1, -35, 0, 5)
+    closeButton.BackgroundColor3 = COLORS.CLOSE
+    closeButton.BorderSizePixel = 0
+    closeButton.Text = "×"
+    closeButton.TextSize = 20
+    closeButton.Font = Enum.Font.GothamBold
+    closeButton.TextColor3 = COLORS.TEXT
+    closeButton.Parent = titleBar
+    createCorner(closeButton, 6)
     
     -- Content container with scrolling
     local scrollFrame = Instance.new("ScrollingFrame")
@@ -118,9 +151,20 @@ function UILibrary:CreateWindow(title)
     padding.PaddingBottom = UDim.new(0, 5)
     padding.Parent = scrollFrame
     
-    -- Auto-update canvas size
+    -- Auto-update canvas size and adjust UI height
     contentLayout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(function()
-        scrollFrame.CanvasSize = UDim2.new(0, 0, 0, contentLayout.AbsoluteContentSize.Y + 10)
+        local contentHeight = contentLayout.AbsoluteContentSize.Y + 10
+        scrollFrame.CanvasSize = UDim2.new(0, 0, 0, contentHeight)
+        
+        -- Auto adjust window height based on content
+        local maxHeight = workspace.CurrentCamera.ViewportSize.Y * 0.8 -- 80% of screen height
+        local desiredHeight = contentHeight + 55 -- content + titlebar + padding
+        local newHeight = math.min(desiredHeight, maxHeight)
+        
+        if not window.Minimized then
+            window.ExpandedSize = UDim2.new(0, main.Size.X.Offset, 0, newHeight)
+            main.Size = window.ExpandedSize
+        end
     end)
     
     -- Make window draggable
@@ -151,6 +195,15 @@ function UILibrary:CreateWindow(title)
         if input.UserInputType == Enum.UserInputType.MouseButton1 then
             isDragging = false
         end
+    end)
+    
+    -- Button event handlers
+    minimizeButton.MouseButton1Click:Connect(function()
+        window:Toggle()
+    end)
+    
+    closeButton.MouseButton1Click:Connect(function()
+        screenGui:Destroy()
     end)
     
     -- Section counter for ordering
@@ -581,6 +634,30 @@ function UILibrary:CreateWindow(title)
         end
         
         return section
+    end
+    
+    -- Toggle window minimize/maximize
+    function window:Toggle()
+        window.Minimized = not window.Minimized
+        
+        if window.Minimized then
+            tween(main, {Size = window.MinimizedSize})
+            scrollFrame.Visible = false
+        else
+            tween(main, {Size = window.ExpandedSize})
+            scrollFrame.Visible = true
+        end
+        
+        return window.Minimized
+    end
+    
+    -- Resize window
+    function window:Resize(width, height)
+        window.ExpandedSize = UDim2.new(0, width, 0, height)
+        if not window.Minimized then
+            main.Size = window.ExpandedSize
+        end
+        return window
     end
     
     return window
