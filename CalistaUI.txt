@@ -1,0 +1,1771 @@
+local Library = {
+	Library = Instance.new("ScreenGui"),
+	Main = Instance.new("Frame"),
+	UICorner = Instance.new("UICorner"),
+	FeatureContainer = Instance.new("ScrollingFrame"),
+	UICorner_2 = Instance.new("UICorner"),
+	UIListLayout = Instance.new("UIListLayout"),
+	ToggleFeature = Instance.new("Frame"),
+	UICorner_3 = Instance.new("UICorner"),
+	Toggle = Instance.new("Frame"),
+	UICorner_4 = Instance.new("UICorner"),
+	ToggleDot = Instance.new("Frame"),
+	UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint"),
+	UICorner_5 = Instance.new("UICorner"),
+	ToggleBtn = Instance.new("TextButton"),
+	UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint"),
+	UIGradient = Instance.new("UIGradient"),
+	Name = Instance.new("TextButton"),
+	UICorner_6 = Instance.new("UICorner"),
+	OpenFrame = Instance.new("Frame"),
+	UICorner_7 = Instance.new("UICorner"),
+	OpenBtn = Instance.new("TextButton"),
+	SetBind = Instance.new("Frame"),
+	UICorner_8 = Instance.new("UICorner"),
+	SetBind_2 = Instance.new("TextButton"),
+	UIPadding = Instance.new("UIPadding"),
+	ToggleFeature_2 = Instance.new("Frame"),
+	UICorner_9 = Instance.new("UICorner"),
+	Toggle_2 = Instance.new("Frame"),
+	UICorner_10 = Instance.new("UICorner"),
+	ToggleDot_2 = Instance.new("Frame"),
+	UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint"),
+	UICorner_11 = Instance.new("UICorner"),
+	ToggleBtn_2 = Instance.new("TextButton"),
+	UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint"),
+	UIGradient_2 = Instance.new("UIGradient"),
+	Name_2 = Instance.new("TextButton"),
+	UICorner_12 = Instance.new("UICorner"),
+	OpenFrame_2 = Instance.new("Frame"),
+	UICorner_13 = Instance.new("UICorner"),
+	OpenBtn_2 = Instance.new("TextButton"),
+	SetBind_3 = Instance.new("Frame"),
+	UICorner_14 = Instance.new("UICorner"),
+	SetBind_4 = Instance.new("TextButton"),
+	ButtonFeature = Instance.new("Frame"),
+	UICorner_15 = Instance.new("UICorner"),
+	Name_3 = Instance.new("TextButton"),
+	UICorner_16 = Instance.new("UICorner"),
+	OpenFrame_3 = Instance.new("Frame"),
+	UICorner_17 = Instance.new("UICorner"),
+	OpenBtn_3 = Instance.new("TextButton"),
+	UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint"),
+	Logo = Instance.new("ImageLabel"),
+	TabContainer = Instance.new("Frame"),
+	UIListLayout_2 = Instance.new("UIListLayout"),
+	TabTemplate = Instance.new("TextButton"),
+	UICorner_18 = Instance.new("UICorner"),
+	TabText = Instance.new("TextLabel"),
+	SelectedTabTemplate = Instance.new("TextButton"),
+	UICorner_19 = Instance.new("UICorner"),
+	UIGradient_3 = Instance.new("UIGradient"),
+	TabText_2 = Instance.new("TextLabel"),
+	ToggleWindow = Instance.new("Frame"),
+	UICorner_20 = Instance.new("UICorner"),
+	FeatureContainer_2 = Instance.new("ScrollingFrame"),
+	UICorner_21 = Instance.new("UICorner"),
+	UIListLayout_3 = Instance.new("UIListLayout"),
+	UIPadding_2 = Instance.new("UIPadding"),
+	SliderCont = Instance.new("Frame"),
+	UICorner_22 = Instance.new("UICorner"),
+	SliderBackground = Instance.new("Frame"),
+	Fill = Instance.new("Frame"),
+	UICorner_23 = Instance.new("UICorner"),
+	UIGradient_4 = Instance.new("UIGradient"),
+	UICorner_24 = Instance.new("UICorner"),
+	TextButton = Instance.new("TextButton"),
+	NumberText = Instance.new("TextBox"),
+	UICorner_25 = Instance.new("UICorner"),
+	SliderClickDetection = Instance.new("TextButton"),
+	SliderText = Instance.new("TextButton"),
+	UICorner_26 = Instance.new("UICorner"),
+	ToggleCont = Instance.new("Frame"),
+	UICorner_27 = Instance.new("UICorner"),
+	ToggleText = Instance.new("TextButton"),
+	UICorner_28 = Instance.new("UICorner"),
+	Toggle_3 = Instance.new("Frame"),
+	UICorner_29 = Instance.new("UICorner"),
+	ToggleDot_3 = Instance.new("Frame"),
+	UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint"),
+	UICorner_30 = Instance.new("UICorner"),
+	ToggleBtn_3 = Instance.new("TextButton"),
+	UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint"),
+	UIGradient_5 = Instance.new("UIGradient"),
+	OpenFrame_4 = Instance.new("Frame"),
+	UICorner_31 = Instance.new("UICorner"),
+	OpenBtn_4 = Instance.new("TextButton"),
+	DropdownCont = Instance.new("Frame"),
+	UICorner_32 = Instance.new("UICorner"),
+	DropdownText = Instance.new("TextButton"),
+	UICorner_33 = Instance.new("UICorner"),
+	DropdownImage = Instance.new("ImageLabel"),
+	UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint"),
+	DropdownButton = Instance.new("TextButton"),
+	DropdownSubCont = Instance.new("ScrollingFrame"),
+	UIPadding_3 = Instance.new("UIPadding"),
+	UIListLayout_4 = Instance.new("UIListLayout"),
+	Option = Instance.new("Frame"),
+	UICorner_34 = Instance.new("UICorner"),
+	Name_4 = Instance.new("TextButton"),
+	UICorner_35 = Instance.new("UICorner"),
+	Option_2 = Instance.new("Frame"),
+	UICorner_36 = Instance.new("UICorner"),
+	Name_5 = Instance.new("TextButton"),
+	UICorner_37 = Instance.new("UICorner"),
+	Check = Instance.new("ImageLabel"),
+	UIAspectRatioConstraint_9 = Instance.new("UIAspectRatioConstraint"),
+	UIGradient_6 = Instance.new("UIGradient"),
+	UICorner_38 = Instance.new("UICorner"),
+	Option_3 = Instance.new("Frame"),
+	UICorner_39 = Instance.new("UICorner"),
+	Name_6 = Instance.new("TextButton"),
+	UICorner_40 = Instance.new("UICorner"),
+	Option_4 = Instance.new("Frame"),
+	UICorner_41 = Instance.new("UICorner"),
+	Name_7 = Instance.new("TextButton"),
+	UICorner_42 = Instance.new("UICorner"),
+	Option_5 = Instance.new("Frame"),
+	UICorner_43 = Instance.new("UICorner"),
+	Name_8 = Instance.new("TextButton"),
+	UICorner_44 = Instance.new("UICorner"),
+	ColorPickerCont = Instance.new("Frame"),
+	UICorner_45 = Instance.new("UICorner"),
+	ToggleText_2 = Instance.new("TextButton"),
+	UICorner_46 = Instance.new("UICorner"),
+	DropdownImage_2 = Instance.new("ImageLabel"),
+	UIAspectRatioConstraint_10 = Instance.new("UIAspectRatioConstraint"),
+	DropdownButton_2 = Instance.new("TextButton"),
+	UIAspectRatioConstraint_11 = Instance.new("UIAspectRatioConstraint"),
+	Title = Instance.new("TextLabel"),
+	UICorner_47 = Instance.new("UICorner"),
+	ButtonWindow = Instance.new("Frame"),
+	UICorner_48 = Instance.new("UICorner"),
+	FeatureContainer_3 = Instance.new("ScrollingFrame"),
+	UICorner_49 = Instance.new("UICorner"),
+	UIListLayout_5 = Instance.new("UIListLayout"),
+	UIPadding_4 = Instance.new("UIPadding"),
+	SliderCont_2 = Instance.new("Frame"),
+	UICorner_50 = Instance.new("UICorner"),
+	SliderBackground_2 = Instance.new("Frame"),
+	Fill_2 = Instance.new("Frame"),
+	UICorner_51 = Instance.new("UICorner"),
+	UIGradient_7 = Instance.new("UIGradient"),
+	UICorner_52 = Instance.new("UICorner"),
+	TextButton_2 = Instance.new("TextButton"),
+	NumberText_2 = Instance.new("TextBox"),
+	UICorner_53 = Instance.new("UICorner"),
+	SliderClickDetection_2 = Instance.new("TextButton"),
+	SliderText_2 = Instance.new("TextButton"),
+	UICorner_54 = Instance.new("UICorner"),
+	ToggleCont_2 = Instance.new("Frame"),
+	UICorner_55 = Instance.new("UICorner"),
+	ToggleText_3 = Instance.new("TextButton"),
+	UICorner_56 = Instance.new("UICorner"),
+	Toggle_4 = Instance.new("Frame"),
+	UICorner_57 = Instance.new("UICorner"),
+	ToggleDot_4 = Instance.new("Frame"),
+	UIAspectRatioConstraint_12 = Instance.new("UIAspectRatioConstraint"),
+	UICorner_58 = Instance.new("UICorner"),
+	ToggleBtn_4 = Instance.new("TextButton"),
+	UIAspectRatioConstraint_13 = Instance.new("UIAspectRatioConstraint"),
+	UIGradient_8 = Instance.new("UIGradient"),
+	DropdownCont_2 = Instance.new("Frame"),
+	UICorner_59 = Instance.new("UICorner"),
+	DropdownText_2 = Instance.new("TextButton"),
+	UICorner_60 = Instance.new("UICorner"),
+	DropdownImage_3 = Instance.new("ImageLabel"),
+	UIAspectRatioConstraint_14 = Instance.new("UIAspectRatioConstraint"),
+	DropdownButton_3 = Instance.new("TextButton"),
+	DropdownSubCont_2 = Instance.new("ScrollingFrame"),
+	UIPadding_5 = Instance.new("UIPadding"),
+	UIListLayout_6 = Instance.new("UIListLayout"),
+	Option_6 = Instance.new("Frame"),
+	UICorner_61 = Instance.new("UICorner"),
+	Name_9 = Instance.new("TextButton"),
+	UICorner_62 = Instance.new("UICorner"),
+	Option_7 = Instance.new("Frame"),
+	UICorner_63 = Instance.new("UICorner"),
+	Name_10 = Instance.new("TextButton"),
+	UICorner_64 = Instance.new("UICorner"),
+	Check_2 = Instance.new("ImageLabel"),
+	UIAspectRatioConstraint_15 = Instance.new("UIAspectRatioConstraint"),
+	UIGradient_9 = Instance.new("UIGradient"),
+	UICorner_65 = Instance.new("UICorner"),
+	Option_8 = Instance.new("Frame"),
+	UICorner_66 = Instance.new("UICorner"),
+	Name_11 = Instance.new("TextButton"),
+	UICorner_67 = Instance.new("UICorner"),
+	Option_9 = Instance.new("Frame"),
+	UICorner_68 = Instance.new("UICorner"),
+	Name_12 = Instance.new("TextButton"),
+	UICorner_69 = Instance.new("UICorner"),
+	Option_10 = Instance.new("Frame"),
+	UICorner_70 = Instance.new("UICorner"),
+	Name_13 = Instance.new("TextButton"),
+	UICorner_71 = Instance.new("UICorner"),
+	ColorPickerCont_2 = Instance.new("Frame"),
+	UICorner_72 = Instance.new("UICorner"),
+	ToggleText_4 = Instance.new("TextButton"),
+	UICorner_73 = Instance.new("UICorner"),
+	DropdownImage_4 = Instance.new("ImageLabel"),
+	UIAspectRatioConstraint_16 = Instance.new("UIAspectRatioConstraint"),
+	DropdownButton_4 = Instance.new("TextButton"),
+	UIAspectRatioConstraint_17 = Instance.new("UIAspectRatioConstraint"),
+	Title_2 = Instance.new("TextLabel"),
+	UICorner_74 = Instance.new("UICorner"),
+	MainButton = Instance.new("TextButton"),
+	UICorner_75 = Instance.new("UICorner"),
+	TextLabel = Instance.new("TextLabel"),
+	KeybindButton = Instance.new("TextButton"),
+	UICorner_76 = Instance.new("UICorner"),
+	TextLabel_2 = Instance.new("TextLabel"),
+}
+
+--Properties:
+
+Library.Library.Name = "Library"
+Library.Library.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Library.Library.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Library.Library.ResetOnSpawn = false
+
+Library.Main.Name = "Main"
+Library.Main.Parent = Library.Library
+Library.Main.AnchorPoint = Vector2.new(0.5, 0)
+Library.Main.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Library.Main.BorderSizePixel = 0
+Library.Main.Position = UDim2.new(0.203804344, 0, 0.388842225, 0)
+Library.Main.Size = UDim2.new(0.309007734, 0, 0.565996647, 0)
+
+Library.UICorner.CornerRadius = UDim.new(0, 12)
+Library.UICorner.Parent = Library.Main
+
+Library.FeatureContainer.Name = "FeatureContainer"
+Library.FeatureContainer.Parent = Library.Main
+Library.FeatureContainer.Active = true
+Library.FeatureContainer.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Library.FeatureContainer.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.FeatureContainer.BorderSizePixel = 0
+Library.FeatureContainer.Position = UDim2.new(0.0500000007, 0, 0.273000002, 0)
+Library.FeatureContainer.Size = UDim2.new(0.899999976, 0, 0.675000012, 0)
+Library.FeatureContainer.CanvasSize = UDim2.new(0, 0, 1, 0)
+Library.FeatureContainer.ScrollBarThickness = 0
+
+Library.UICorner_2.Parent = Library.FeatureContainer
+
+Library.UIListLayout.Parent = Library.FeatureContainer
+Library.UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+Library.UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+Library.UIListLayout.Padding = UDim.new(0.0350000001, 0)
+
+Library.ToggleFeature.Name = "ToggleFeature"
+Library.ToggleFeature.Parent = Library.FeatureContainer
+Library.ToggleFeature.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+Library.ToggleFeature.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.ToggleFeature.BorderSizePixel = 0
+Library.ToggleFeature.Position = UDim2.new(0.0249999836, 0, 0.0400604233, 0)
+Library.ToggleFeature.Size = UDim2.new(0.917911708, 0, 0.118240066, 0)
+
+Library.UICorner_3.Parent = Library.ToggleFeature
+
+Library.Toggle.Name = "Toggle"
+Library.Toggle.Parent = Library.ToggleFeature
+Library.Toggle.AnchorPoint = Vector2.new(0.5, 0.5)
+Library.Toggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Library.Toggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.Toggle.BorderSizePixel = 0
+Library.Toggle.Position = UDim2.new(0.930070937, 0, 0.485814184, 0)
+Library.Toggle.Size = UDim2.new(0.132702976, 0, 0.560301363, 0)
+
+Library.UICorner_4.CornerRadius = UDim.new(1, 0)
+Library.UICorner_4.Parent = Library.Toggle
+
+Library.ToggleDot.Name = "ToggleDot"
+Library.ToggleDot.Parent = Library.Toggle
+Library.ToggleDot.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
+Library.ToggleDot.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.ToggleDot.BorderSizePixel = 0
+Library.ToggleDot.Position = UDim2.new(0.524999976, 0, 0.0869999975, 0)
+Library.ToggleDot.Size = UDim2.new(0.403407961, 0, 0.806819499, 0)
+
+Library.UIAspectRatioConstraint.Parent = Library.ToggleDot
+
+Library.UICorner_5.CornerRadius = UDim.new(1, 0)
+Library.UICorner_5.Parent = Library.ToggleDot
+
+Library.ToggleBtn.Name = "ToggleBtn"
+Library.ToggleBtn.Parent = Library.Toggle
+Library.ToggleBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Library.ToggleBtn.BackgroundTransparency = 1.000
+Library.ToggleBtn.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.ToggleBtn.BorderSizePixel = 0
+Library.ToggleBtn.Size = UDim2.new(1, 0, 1, 0)
+Library.ToggleBtn.Font = Enum.Font.SourceSans
+Library.ToggleBtn.Text = ""
+Library.ToggleBtn.TextColor3 = Color3.fromRGB(0, 0, 0)
+Library.ToggleBtn.TextSize = 14.000
+Library.ToggleBtn.TextTransparency = 1.000
+
+Library.UIAspectRatioConstraint_2.Parent = Library.Toggle
+Library.UIAspectRatioConstraint_2.AspectRatio = 2.000
+
+Library.UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(106, 0, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(32, 22, 54))}
+Library.UIGradient.Rotation = 90
+Library.UIGradient.Parent = Library.Toggle
+
+Library.Name.Name = "Name"
+Library.Name.Parent = Library.ToggleFeature
+Library.Name.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.Name.BackgroundTransparency = 1.000
+Library.Name.Position = UDim2.new(0.0287759062, 0, 0.339840919, 0)
+Library.Name.Size = UDim2.new(0.271235526, 0, 0.381159723, 0)
+Library.Name.AutoButtonColor = false
+Library.Name.Font = Enum.Font.Gotham
+Library.Name.Text = "Toggle On"
+Library.Name.TextColor3 = Color3.fromRGB(157, 157, 157)
+Library.Name.TextScaled = true
+Library.Name.TextSize = 20.000
+Library.Name.TextWrapped = true
+Library.Name.TextXAlignment = Enum.TextXAlignment.Left
+
+Library.UICorner_6.CornerRadius = UDim.new(0, 6)
+Library.UICorner_6.Parent = Library.Name
+
+Library.OpenFrame.Name = "OpenFrame"
+Library.OpenFrame.Parent = Library.ToggleFeature
+Library.OpenFrame.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.OpenFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.OpenFrame.BorderSizePixel = 0
+Library.OpenFrame.Position = UDim2.new(0.715478957, 0, 0.288131207, 0)
+Library.OpenFrame.Size = UDim2.new(0.126312718, 0, 0.441515267, 0)
+
+Library.UICorner_7.CornerRadius = UDim.new(1, 0)
+Library.UICorner_7.Parent = Library.OpenFrame
+
+Library.OpenBtn.Name = "OpenBtn"
+Library.OpenBtn.Parent = Library.OpenFrame
+Library.OpenBtn.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.OpenBtn.BackgroundTransparency = 1.000
+Library.OpenBtn.Position = UDim2.new(0.100000001, 0, 0.100000001, 0)
+Library.OpenBtn.Size = UDim2.new(0.800000012, 0, 0.800000012, 0)
+Library.OpenBtn.AutoButtonColor = false
+Library.OpenBtn.Font = Enum.Font.Gotham
+Library.OpenBtn.Text = "Close"
+Library.OpenBtn.TextColor3 = Color3.fromRGB(124, 124, 124)
+Library.OpenBtn.TextScaled = true
+Library.OpenBtn.TextSize = 16.000
+Library.OpenBtn.TextWrapped = true
+
+Library.SetBind.Name = "SetBind"
+Library.SetBind.Parent = Library.ToggleFeature
+Library.SetBind.AnchorPoint = Vector2.new(0.5, 0)
+Library.SetBind.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.SetBind.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.SetBind.BorderSizePixel = 0
+Library.SetBind.Position = UDim2.new(0.621442139, 0, 0.288130641, 0)
+Library.SetBind.Size = UDim2.new(0.147806838, 0, 0.441515267, 0)
+
+Library.UICorner_8.CornerRadius = UDim.new(1, 0)
+Library.UICorner_8.Parent = Library.SetBind
+
+Library.SetBind_2.Name = "SetBind"
+Library.SetBind_2.Parent = Library.SetBind
+Library.SetBind_2.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.SetBind_2.BackgroundTransparency = 1.000
+Library.SetBind_2.Position = UDim2.new(0.100000001, 0, 0.100000001, 0)
+Library.SetBind_2.Size = UDim2.new(0.800000012, 0, 0.800000012, 0)
+Library.SetBind_2.AutoButtonColor = false
+Library.SetBind_2.Font = Enum.Font.Gotham
+Library.SetBind_2.Text = "Set Bind"
+Library.SetBind_2.TextColor3 = Color3.fromRGB(124, 124, 124)
+Library.SetBind_2.TextScaled = true
+Library.SetBind_2.TextSize = 16.000
+Library.SetBind_2.TextWrapped = true
+
+Library.UIPadding.Parent = Library.FeatureContainer
+Library.UIPadding.PaddingTop = UDim.new(0.0399999991, 0)
+
+Library.ToggleFeature_2.Name = "ToggleFeature"
+Library.ToggleFeature_2.Parent = Library.FeatureContainer
+Library.ToggleFeature_2.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+Library.ToggleFeature_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.ToggleFeature_2.BorderSizePixel = 0
+Library.ToggleFeature_2.Position = UDim2.new(0.0249999836, 0, 0.0400604233, 0)
+Library.ToggleFeature_2.Size = UDim2.new(0.917911708, 0, 0.118240066, 0)
+
+Library.UICorner_9.Parent = Library.ToggleFeature_2
+
+Library.Toggle_2.Name = "Toggle"
+Library.Toggle_2.Parent = Library.ToggleFeature_2
+Library.Toggle_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Library.Toggle_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Library.Toggle_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.Toggle_2.BorderSizePixel = 0
+Library.Toggle_2.Position = UDim2.new(0.930070937, 0, 0.485814184, 0)
+Library.Toggle_2.Size = UDim2.new(0.132702976, 0, 0.560301363, 0)
+
+Library.UICorner_10.CornerRadius = UDim.new(1, 0)
+Library.UICorner_10.Parent = Library.Toggle_2
+
+Library.ToggleDot_2.Name = "ToggleDot"
+Library.ToggleDot_2.Parent = Library.Toggle_2
+Library.ToggleDot_2.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
+Library.ToggleDot_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.ToggleDot_2.BorderSizePixel = 0
+Library.ToggleDot_2.Position = UDim2.new(0.075000003, 0, 0.0869999975, 0)
+Library.ToggleDot_2.Size = UDim2.new(0.403407961, 0, 0.806819499, 0)
+
+Library.UIAspectRatioConstraint_3.Parent = Library.ToggleDot_2
+
+Library.UICorner_11.CornerRadius = UDim.new(1, 0)
+Library.UICorner_11.Parent = Library.ToggleDot_2
+
+Library.ToggleBtn_2.Name = "ToggleBtn"
+Library.ToggleBtn_2.Parent = Library.Toggle_2
+Library.ToggleBtn_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Library.ToggleBtn_2.BackgroundTransparency = 1.000
+Library.ToggleBtn_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.ToggleBtn_2.BorderSizePixel = 0
+Library.ToggleBtn_2.Size = UDim2.new(1, 0, 1, 0)
+Library.ToggleBtn_2.Font = Enum.Font.SourceSans
+Library.ToggleBtn_2.Text = ""
+Library.ToggleBtn_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Library.ToggleBtn_2.TextSize = 14.000
+Library.ToggleBtn_2.TextTransparency = 1.000
+
+Library.UIAspectRatioConstraint_4.Parent = Library.Toggle_2
+Library.UIAspectRatioConstraint_4.AspectRatio = 2.000
+
+Library.UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(122, 122, 122)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(24, 24, 24))}
+Library.UIGradient_2.Rotation = 90
+Library.UIGradient_2.Parent = Library.Toggle_2
+
+Library.Name_2.Name = "Name"
+Library.Name_2.Parent = Library.ToggleFeature_2
+Library.Name_2.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.Name_2.BackgroundTransparency = 1.000
+Library.Name_2.Position = UDim2.new(0.0287758894, 0, 0.339841127, 0)
+Library.Name_2.Size = UDim2.new(0.34915176, 0, 0.381159723, 0)
+Library.Name_2.AutoButtonColor = false
+Library.Name_2.Font = Enum.Font.Gotham
+Library.Name_2.Text = "Toggle Off"
+Library.Name_2.TextColor3 = Color3.fromRGB(157, 157, 157)
+Library.Name_2.TextScaled = true
+Library.Name_2.TextSize = 20.000
+Library.Name_2.TextWrapped = true
+Library.Name_2.TextXAlignment = Enum.TextXAlignment.Left
+
+Library.UICorner_12.CornerRadius = UDim.new(0, 6)
+Library.UICorner_12.Parent = Library.Name_2
+
+Library.OpenFrame_2.Name = "OpenFrame"
+Library.OpenFrame_2.Parent = Library.ToggleFeature_2
+Library.OpenFrame_2.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.OpenFrame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.OpenFrame_2.BorderSizePixel = 0
+Library.OpenFrame_2.Position = UDim2.new(0.715478957, 0, 0.288131207, 0)
+Library.OpenFrame_2.Size = UDim2.new(0.126312718, 0, 0.441515267, 0)
+
+Library.UICorner_13.CornerRadius = UDim.new(1, 0)
+Library.UICorner_13.Parent = Library.OpenFrame_2
+
+Library.OpenBtn_2.Name = "OpenBtn"
+Library.OpenBtn_2.Parent = Library.OpenFrame_2
+Library.OpenBtn_2.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.OpenBtn_2.BackgroundTransparency = 1.000
+Library.OpenBtn_2.Position = UDim2.new(0.100000001, 0, 0.100000001, 0)
+Library.OpenBtn_2.Size = UDim2.new(0.800000012, 0, 0.800000012, 0)
+Library.OpenBtn_2.AutoButtonColor = false
+Library.OpenBtn_2.Font = Enum.Font.Gotham
+Library.OpenBtn_2.Text = "Open"
+Library.OpenBtn_2.TextColor3 = Color3.fromRGB(124, 124, 124)
+Library.OpenBtn_2.TextScaled = true
+Library.OpenBtn_2.TextSize = 16.000
+Library.OpenBtn_2.TextWrapped = true
+
+Library.SetBind_3.Name = "SetBind"
+Library.SetBind_3.Parent = Library.ToggleFeature_2
+Library.SetBind_3.AnchorPoint = Vector2.new(0.5, 0)
+Library.SetBind_3.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.SetBind_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.SetBind_3.BorderSizePixel = 0
+Library.SetBind_3.Position = UDim2.new(0.621442139, 0, 0.288130641, 0)
+Library.SetBind_3.Size = UDim2.new(0.147806838, 0, 0.441515267, 0)
+
+Library.UICorner_14.CornerRadius = UDim.new(1, 0)
+Library.UICorner_14.Parent = Library.SetBind_3
+
+Library.SetBind_4.Name = "SetBind"
+Library.SetBind_4.Parent = Library.SetBind_3
+Library.SetBind_4.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.SetBind_4.BackgroundTransparency = 1.000
+Library.SetBind_4.Position = UDim2.new(0.100000001, 0, 0.100000001, 0)
+Library.SetBind_4.Size = UDim2.new(0.800000012, 0, 0.800000012, 0)
+Library.SetBind_4.AutoButtonColor = false
+Library.SetBind_4.Font = Enum.Font.Gotham
+Library.SetBind_4.Text = "Set Bind"
+Library.SetBind_4.TextColor3 = Color3.fromRGB(124, 124, 124)
+Library.SetBind_4.TextScaled = true
+Library.SetBind_4.TextSize = 16.000
+Library.SetBind_4.TextWrapped = true
+
+Library.ButtonFeature.Name = "ButtonFeature"
+Library.ButtonFeature.Parent = Library.FeatureContainer
+Library.ButtonFeature.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+Library.ButtonFeature.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.ButtonFeature.BorderSizePixel = 0
+Library.ButtonFeature.Position = UDim2.new(0.0249999836, 0, 0.0400604233, 0)
+Library.ButtonFeature.Size = UDim2.new(0.917911708, 0, 0.118240066, 0)
+
+Library.UICorner_15.Parent = Library.ButtonFeature
+
+Library.Name_3.Name = "Name"
+Library.Name_3.Parent = Library.ButtonFeature
+Library.Name_3.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.Name_3.BackgroundTransparency = 1.000
+Library.Name_3.Position = UDim2.new(0.0287758894, 0, 0.339841127, 0)
+Library.Name_3.Size = UDim2.new(0.34915176, 0, 0.381159723, 0)
+Library.Name_3.AutoButtonColor = false
+Library.Name_3.Font = Enum.Font.Gotham
+Library.Name_3.TextColor3 = Color3.fromRGB(157, 157, 157)
+Library.Name_3.TextScaled = true
+Library.Name_3.TextSize = 20.000
+Library.Name_3.TextWrapped = true
+Library.Name_3.TextXAlignment = Enum.TextXAlignment.Left
+
+Library.UICorner_16.CornerRadius = UDim.new(0, 6)
+Library.UICorner_16.Parent = Library.Name_3
+
+Library.OpenFrame_3.Name = "OpenFrame"
+Library.OpenFrame_3.Parent = Library.ButtonFeature
+Library.OpenFrame_3.AnchorPoint = Vector2.new(0.5, 0)
+Library.OpenFrame_3.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.OpenFrame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.OpenFrame_3.BorderSizePixel = 0
+Library.OpenFrame_3.Position = UDim2.new(0.903552532, 0, 0.288130641, 0)
+Library.OpenFrame_3.Size = UDim2.new(0.126312718, 0, 0.441515267, 0)
+
+Library.UICorner_17.CornerRadius = UDim.new(0, 6)
+Library.UICorner_17.Parent = Library.OpenFrame_3
+
+Library.OpenBtn_3.Name = "OpenBtn"
+Library.OpenBtn_3.Parent = Library.OpenFrame_3
+Library.OpenBtn_3.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.OpenBtn_3.BackgroundTransparency = 1.000
+Library.OpenBtn_3.Position = UDim2.new(0.100000001, 0, 0.100000001, 0)
+Library.OpenBtn_3.Size = UDim2.new(0.800000012, 0, 0.800000012, 0)
+Library.OpenBtn_3.AutoButtonColor = false
+Library.OpenBtn_3.Font = Enum.Font.Gotham
+Library.OpenBtn_3.Text = "Open"
+Library.OpenBtn_3.TextColor3 = Color3.fromRGB(124, 124, 124)
+Library.OpenBtn_3.TextScaled = true
+Library.OpenBtn_3.TextSize = 16.000
+Library.OpenBtn_3.TextWrapped = true
+
+Library.UIAspectRatioConstraint_5.Parent = Library.Main
+
+Library.Logo.Name = "Logo"
+Library.Logo.Parent = Library.Main
+Library.Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Library.Logo.BackgroundTransparency = 1.000
+Library.Logo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.Logo.BorderSizePixel = 0
+Library.Logo.Position = UDim2.new(0.41880402, 0, 0.0212600902, 0)
+Library.Logo.Size = UDim2.new(0.160068005, 0, 0.130947143, 0)
+Library.Logo.Image = "rbxassetid://115012323389892"
+Library.Logo.ScaleType = Enum.ScaleType.Fit
+
+Library.TabContainer.Name = "TabContainer"
+Library.TabContainer.Parent = Library.Main
+Library.TabContainer.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+Library.TabContainer.BackgroundTransparency = 1.000
+Library.TabContainer.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Library.TabContainer.Position = UDim2.new(0.0500001237, 0, 0.171019778, 0)
+Library.TabContainer.Selectable = true
+Library.TabContainer.Size = UDim2.new(0.899999738, 0, 0.068647705, 0)
+
+Library.UIListLayout_2.Parent = Library.TabContainer
+Library.UIListLayout_2.FillDirection = Enum.FillDirection.Horizontal
+Library.UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+Library.UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+Library.UIListLayout_2.VerticalAlignment = Enum.VerticalAlignment.Center
+Library.UIListLayout_2.Padding = UDim.new(0.0149999997, 0)
+
+Library.TabTemplate.Name = "TabTemplate"
+Library.TabTemplate.Parent = Library.TabContainer
+Library.TabTemplate.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Library.TabTemplate.Position = UDim2.new(0.507500052, 0, 0.0919634774, 0)
+Library.TabTemplate.Size = UDim2.new(0.151324019, 0, 0.900536537, 0)
+Library.TabTemplate.AutoButtonColor = false
+Library.TabTemplate.Font = Enum.Font.GothamBold
+Library.TabTemplate.Text = ""
+Library.TabTemplate.TextColor3 = Color3.fromRGB(173, 173, 173)
+Library.TabTemplate.TextSize = 16.000
+
+Library.UICorner_18.CornerRadius = UDim.new(0, 6)
+Library.UICorner_18.Parent = Library.TabTemplate
+
+Library.TabText.Name = "TabText"
+Library.TabText.Parent = Library.TabTemplate
+Library.TabText.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Library.TabText.BackgroundTransparency = 1.000
+Library.TabText.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Library.TabText.BorderSizePixel = 0
+Library.TabText.Position = UDim2.new(0.0453002639, 0, 0.0304081813, 0)
+Library.TabText.Selectable = true
+Library.TabText.Size = UDim2.new(0.899999976, 0, 0.899999976, 0)
+Library.TabText.Font = Enum.Font.Gotham
+Library.TabText.Text = "Tab Two"
+Library.TabText.TextColor3 = Color3.fromRGB(173, 173, 173)
+Library.TabText.TextScaled = true
+Library.TabText.TextWrapped = true
+
+Library.SelectedTabTemplate.Name = "SelectedTabTemplate"
+Library.SelectedTabTemplate.Parent = Library.TabContainer
+Library.SelectedTabTemplate.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Library.SelectedTabTemplate.Position = UDim2.new(0.341175973, 0, 0.0919634774, 0)
+Library.SelectedTabTemplate.Size = UDim2.new(0.151324019, 0, 0.900536537, 0)
+Library.SelectedTabTemplate.AutoButtonColor = false
+Library.SelectedTabTemplate.Font = Enum.Font.GothamBold
+Library.SelectedTabTemplate.Text = ""
+Library.SelectedTabTemplate.TextColor3 = Color3.fromRGB(173, 173, 173)
+Library.SelectedTabTemplate.TextSize = 16.000
+
+Library.UICorner_19.CornerRadius = UDim.new(0, 6)
+Library.UICorner_19.Parent = Library.SelectedTabTemplate
+
+Library.UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(106, 0, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(32, 22, 54))}
+Library.UIGradient_3.Rotation = 90
+Library.UIGradient_3.Parent = Library.SelectedTabTemplate
+
+Library.TabText_2.Name = "TabText"
+Library.TabText_2.Parent = Library.SelectedTabTemplate
+Library.TabText_2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Library.TabText_2.BackgroundTransparency = 1.000
+Library.TabText_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Library.TabText_2.BorderSizePixel = 0
+Library.TabText_2.Position = UDim2.new(0.0453009531, 0, 0.0304081813, 0)
+Library.TabText_2.Selectable = true
+Library.TabText_2.Size = UDim2.new(0.899999976, 0, 0.899999976, 0)
+Library.TabText_2.Font = Enum.Font.Gotham
+Library.TabText_2.Text = "Tab One"
+Library.TabText_2.TextColor3 = Color3.fromRGB(173, 173, 173)
+Library.TabText_2.TextScaled = true
+Library.TabText_2.TextWrapped = true
+
+Library.ToggleWindow.Name = "ToggleWindow"
+Library.ToggleWindow.Parent = Library.Library
+Library.ToggleWindow.AnchorPoint = Vector2.new(0.5, 0)
+Library.ToggleWindow.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Library.ToggleWindow.BorderSizePixel = 0
+Library.ToggleWindow.Position = UDim2.new(0.483999997, 0, 0.388999999, 0)
+Library.ToggleWindow.Size = UDim2.new(0.237207398, 0, 0.434482902, 0)
+
+Library.UICorner_20.CornerRadius = UDim.new(0, 12)
+Library.UICorner_20.Parent = Library.ToggleWindow
+
+Library.FeatureContainer_2.Name = "FeatureContainer"
+Library.FeatureContainer_2.Parent = Library.ToggleWindow
+Library.FeatureContainer_2.Active = true
+Library.FeatureContainer_2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Library.FeatureContainer_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.FeatureContainer_2.BorderSizePixel = 0
+Library.FeatureContainer_2.Position = UDim2.new(0.0619446635, 0, 0.173616752, 0)
+Library.FeatureContainer_2.Size = UDim2.new(0.863205612, 0, 0.768337429, 0)
+Library.FeatureContainer_2.CanvasSize = UDim2.new(0, 0, 1, 0)
+Library.FeatureContainer_2.ScrollBarThickness = 0
+
+Library.UICorner_21.CornerRadius = UDim.new(0, 12)
+Library.UICorner_21.Parent = Library.FeatureContainer_2
+
+Library.UIListLayout_3.Parent = Library.FeatureContainer_2
+Library.UIListLayout_3.HorizontalAlignment = Enum.HorizontalAlignment.Center
+Library.UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+Library.UIListLayout_3.Padding = UDim.new(0.0299999993, 0)
+
+Library.UIPadding_2.Parent = Library.FeatureContainer_2
+Library.UIPadding_2.PaddingTop = UDim.new(0.0500000007, 0)
+
+Library.SliderCont.Name = "SliderCont"
+Library.SliderCont.Parent = Library.FeatureContainer_2
+Library.SliderCont.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+Library.SliderCont.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.SliderCont.BorderSizePixel = 0
+Library.SliderCont.Position = UDim2.new(0.0664456859, 0, 0.0323860124, 0)
+Library.SliderCont.Size = UDim2.new(0.867108643, 0, 0.163161293, 0)
+
+Library.UICorner_22.Parent = Library.SliderCont
+
+Library.SliderBackground.Name = "SliderBackground"
+Library.SliderBackground.Parent = Library.SliderCont
+Library.SliderBackground.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Library.SliderBackground.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.SliderBackground.BorderSizePixel = 0
+Library.SliderBackground.Position = UDim2.new(0.0367861241, 0, 0.641297579, 0)
+Library.SliderBackground.Size = UDim2.new(0.923382223, 0, 0.170000002, 0)
+
+Library.Fill.Name = "Fill"
+Library.Fill.Parent = Library.SliderBackground
+Library.Fill.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Library.Fill.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.Fill.BorderSizePixel = 0
+Library.Fill.Size = UDim2.new(0.5, 0, 1, 0)
+
+Library.UICorner_23.CornerRadius = UDim.new(1, 0)
+Library.UICorner_23.Parent = Library.Fill
+
+Library.UIGradient_4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(106, 0, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(32, 22, 54))}
+Library.UIGradient_4.Rotation = 90
+Library.UIGradient_4.Parent = Library.Fill
+
+Library.UICorner_24.CornerRadius = UDim.new(1, 0)
+Library.UICorner_24.Parent = Library.SliderBackground
+
+Library.TextButton.Parent = Library.SliderBackground
+Library.TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Library.TextButton.BackgroundTransparency = 1.000
+Library.TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.TextButton.BorderSizePixel = 0
+Library.TextButton.Size = UDim2.new(1, 0, 1, 0)
+Library.TextButton.Font = Enum.Font.SourceSans
+Library.TextButton.Text = ""
+Library.TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+Library.TextButton.TextSize = 14.000
+
+Library.NumberText.Name = "NumberText"
+Library.NumberText.Parent = Library.SliderCont
+Library.NumberText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Library.NumberText.BackgroundTransparency = 1.000
+Library.NumberText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.NumberText.BorderSizePixel = 0
+Library.NumberText.Position = UDim2.new(0.726315081, 0, 0.17899999, 0)
+Library.NumberText.Size = UDim2.new(0.230000004, 0, 0.264999986, 0)
+Library.NumberText.Font = Enum.Font.Gotham
+Library.NumberText.PlaceholderColor3 = Color3.fromRGB(157, 157, 157)
+Library.NumberText.Text = "67 studs"
+Library.NumberText.TextColor3 = Color3.fromRGB(157, 157, 157)
+Library.NumberText.TextScaled = true
+Library.NumberText.TextSize = 14.000
+Library.NumberText.TextWrapped = true
+Library.NumberText.TextXAlignment = Enum.TextXAlignment.Right
+
+Library.UICorner_25.CornerRadius = UDim.new(0, 6)
+Library.UICorner_25.Parent = Library.NumberText
+
+Library.SliderClickDetection.Name = "SliderClickDetection"
+Library.SliderClickDetection.Parent = Library.SliderCont
+Library.SliderClickDetection.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Library.SliderClickDetection.BackgroundTransparency = 1.000
+Library.SliderClickDetection.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.SliderClickDetection.BorderSizePixel = 0
+Library.SliderClickDetection.Size = UDim2.new(1, 0, 1, 0)
+Library.SliderClickDetection.ZIndex = 2
+Library.SliderClickDetection.Font = Enum.Font.SourceSans
+Library.SliderClickDetection.Text = ""
+Library.SliderClickDetection.TextColor3 = Color3.fromRGB(0, 0, 0)
+Library.SliderClickDetection.TextSize = 14.000
+
+Library.SliderText.Name = "SliderText"
+Library.SliderText.Parent = Library.SliderCont
+Library.SliderText.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.SliderText.BackgroundTransparency = 1.000
+Library.SliderText.Position = UDim2.new(0.0398632847, 0, 0.135777652, 0)
+Library.SliderText.Size = UDim2.new(0.667201817, 0, 0.360899746, 0)
+Library.SliderText.AutoButtonColor = false
+Library.SliderText.Font = Enum.Font.Gotham
+Library.SliderText.Text = "Slider"
+Library.SliderText.TextColor3 = Color3.fromRGB(157, 157, 157)
+Library.SliderText.TextScaled = true
+Library.SliderText.TextSize = 15.000
+Library.SliderText.TextWrapped = true
+Library.SliderText.TextXAlignment = Enum.TextXAlignment.Left
+
+Library.UICorner_26.CornerRadius = UDim.new(0, 6)
+Library.UICorner_26.Parent = Library.SliderText
+
+Library.ToggleCont.Name = "ToggleCont"
+Library.ToggleCont.Parent = Library.FeatureContainer_2
+Library.ToggleCont.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+Library.ToggleCont.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.ToggleCont.BorderSizePixel = 0
+Library.ToggleCont.Position = UDim2.new(0.0664457604, 0, 0.426592648, 0)
+Library.ToggleCont.Size = UDim2.new(0.867108762, 0, 0.120705128, 0)
+
+Library.UICorner_27.Parent = Library.ToggleCont
+
+Library.ToggleText.Name = "ToggleText"
+Library.ToggleText.Parent = Library.ToggleCont
+Library.ToggleText.AnchorPoint = Vector2.new(0.5, 0.5)
+Library.ToggleText.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.ToggleText.BackgroundTransparency = 1.000
+Library.ToggleText.Position = UDim2.new(0.324971646, 0, 0.49999994, 0)
+Library.ToggleText.Size = UDim2.new(0.569408953, 0, 0.517574847, 0)
+Library.ToggleText.AutoButtonColor = false
+Library.ToggleText.Font = Enum.Font.Gotham
+Library.ToggleText.Text = "Window Toggle"
+Library.ToggleText.TextColor3 = Color3.fromRGB(157, 157, 157)
+Library.ToggleText.TextScaled = true
+Library.ToggleText.TextSize = 15.000
+Library.ToggleText.TextWrapped = true
+Library.ToggleText.TextXAlignment = Enum.TextXAlignment.Left
+
+Library.UICorner_28.CornerRadius = UDim.new(0, 6)
+Library.UICorner_28.Parent = Library.ToggleText
+
+Library.Toggle_3.Name = "Toggle"
+Library.Toggle_3.Parent = Library.ToggleCont
+Library.Toggle_3.AnchorPoint = Vector2.new(0.5, 0.5)
+Library.Toggle_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Library.Toggle_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.Toggle_3.BorderSizePixel = 0
+Library.Toggle_3.Position = UDim2.new(0.899999976, 0, 0.5, 0)
+Library.Toggle_3.Size = UDim2.new(0.132702976, 0, 0.560301363, 0)
+
+Library.UICorner_29.CornerRadius = UDim.new(1, 0)
+Library.UICorner_29.Parent = Library.Toggle_3
+
+Library.ToggleDot_3.Name = "ToggleDot"
+Library.ToggleDot_3.Parent = Library.Toggle_3
+Library.ToggleDot_3.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
+Library.ToggleDot_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.ToggleDot_3.BorderSizePixel = 0
+Library.ToggleDot_3.Position = UDim2.new(0.550000012, 0, 0.0869999975, 0)
+Library.ToggleDot_3.Size = UDim2.new(0.403407961, 0, 0.806819499, 0)
+
+Library.UIAspectRatioConstraint_6.Parent = Library.ToggleDot_3
+
+Library.UICorner_30.CornerRadius = UDim.new(1, 0)
+Library.UICorner_30.Parent = Library.ToggleDot_3
+
+Library.ToggleBtn_3.Name = "ToggleBtn"
+Library.ToggleBtn_3.Parent = Library.Toggle_3
+Library.ToggleBtn_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Library.ToggleBtn_3.BackgroundTransparency = 1.000
+Library.ToggleBtn_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.ToggleBtn_3.BorderSizePixel = 0
+Library.ToggleBtn_3.Size = UDim2.new(1, 0, 1, 0)
+Library.ToggleBtn_3.Font = Enum.Font.SourceSans
+Library.ToggleBtn_3.Text = ""
+Library.ToggleBtn_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Library.ToggleBtn_3.TextSize = 14.000
+Library.ToggleBtn_3.TextTransparency = 1.000
+
+Library.UIAspectRatioConstraint_7.Parent = Library.Toggle_3
+Library.UIAspectRatioConstraint_7.AspectRatio = 2.000
+
+Library.UIGradient_5.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(106, 0, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(32, 22, 54))}
+Library.UIGradient_5.Rotation = 90
+Library.UIGradient_5.Parent = Library.Toggle_3
+
+Library.OpenFrame_4.Name = "OpenFrame"
+Library.OpenFrame_4.Parent = Library.ToggleCont
+Library.OpenFrame_4.AnchorPoint = Vector2.new(0.5, 0)
+Library.OpenFrame_4.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.OpenFrame_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.OpenFrame_4.BorderSizePixel = 0
+Library.OpenFrame_4.Position = UDim2.new(0.697801828, 0, 0.241213456, 0)
+Library.OpenFrame_4.Size = UDim2.new(0.216000006, 0, 0.560000002, 0)
+
+Library.UICorner_31.CornerRadius = UDim.new(1, 0)
+Library.UICorner_31.Parent = Library.OpenFrame_4
+
+Library.OpenBtn_4.Name = "OpenBtn"
+Library.OpenBtn_4.Parent = Library.OpenFrame_4
+Library.OpenBtn_4.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.OpenBtn_4.BackgroundTransparency = 1.000
+Library.OpenBtn_4.Position = UDim2.new(0.100000001, 0, 0.100000001, 0)
+Library.OpenBtn_4.Size = UDim2.new(0.800000012, 0, 0.800000012, 0)
+Library.OpenBtn_4.AutoButtonColor = false
+Library.OpenBtn_4.Font = Enum.Font.Gotham
+Library.OpenBtn_4.Text = "Set Bind"
+Library.OpenBtn_4.TextColor3 = Color3.fromRGB(124, 124, 124)
+Library.OpenBtn_4.TextScaled = true
+Library.OpenBtn_4.TextSize = 16.000
+Library.OpenBtn_4.TextWrapped = true
+
+Library.DropdownCont.Name = "DropdownCont"
+Library.DropdownCont.Parent = Library.FeatureContainer_2
+Library.DropdownCont.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+Library.DropdownCont.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.DropdownCont.BorderSizePixel = 0
+Library.DropdownCont.Position = UDim2.new(0.0664457604, 0, 0.426592648, 0)
+Library.DropdownCont.Size = UDim2.new(0.866999984, 0, 0.115000002, 0)
+
+Library.UICorner_32.Parent = Library.DropdownCont
+
+Library.DropdownText.Name = "DropdownText"
+Library.DropdownText.Parent = Library.DropdownCont
+Library.DropdownText.AnchorPoint = Vector2.new(0.5, 0.5)
+Library.DropdownText.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.DropdownText.BackgroundTransparency = 1.000
+Library.DropdownText.Position = UDim2.new(0.27092272, 0, 0.499999762, 0)
+Library.DropdownText.Size = UDim2.new(0.461310029, 0, 0.517574847, 0)
+Library.DropdownText.AutoButtonColor = false
+Library.DropdownText.Font = Enum.Font.Gotham
+Library.DropdownText.Text = "Dropdown"
+Library.DropdownText.TextColor3 = Color3.fromRGB(157, 157, 157)
+Library.DropdownText.TextScaled = true
+Library.DropdownText.TextSize = 15.000
+Library.DropdownText.TextWrapped = true
+Library.DropdownText.TextXAlignment = Enum.TextXAlignment.Left
+
+Library.UICorner_33.CornerRadius = UDim.new(0, 6)
+Library.UICorner_33.Parent = Library.DropdownText
+
+Library.DropdownImage.Name = "DropdownImage"
+Library.DropdownImage.Parent = Library.DropdownCont
+Library.DropdownImage.BackgroundTransparency = 1.000
+Library.DropdownImage.BorderSizePixel = 0
+Library.DropdownImage.Position = UDim2.new(0.885795295, 0, 0.107260592, 0)
+Library.DropdownImage.Size = UDim2.new(0.0926472023, 0, 0.747345328, 0)
+Library.DropdownImage.Image = "http://www.roblox.com/asset/?id=6034818372"
+Library.DropdownImage.ImageColor3 = Color3.fromRGB(194, 194, 194)
+
+Library.UIAspectRatioConstraint_8.Parent = Library.DropdownImage
+
+Library.DropdownButton.Name = "DropdownButton"
+Library.DropdownButton.Parent = Library.DropdownImage
+Library.DropdownButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Library.DropdownButton.BackgroundTransparency = 1.000
+Library.DropdownButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.DropdownButton.BorderSizePixel = 0
+Library.DropdownButton.Size = UDim2.new(1, 0, 1, 0)
+Library.DropdownButton.Font = Enum.Font.SourceSans
+Library.DropdownButton.Text = ""
+Library.DropdownButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+Library.DropdownButton.TextSize = 14.000
+
+Library.DropdownSubCont.Name = "DropdownSubCont"
+Library.DropdownSubCont.Parent = Library.DropdownCont
+Library.DropdownSubCont.Active = true
+Library.DropdownSubCont.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+Library.DropdownSubCont.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.DropdownSubCont.BorderSizePixel = 0
+Library.DropdownSubCont.Position = UDim2.new(0, 0, 1.27700162, 0)
+Library.DropdownSubCont.Size = UDim2.new(1.00199997, 0, 3.47201586, 0)
+Library.DropdownSubCont.Visible = false
+Library.DropdownSubCont.ZIndex = 15
+Library.DropdownSubCont.CanvasSize = UDim2.new(0, 0, 1, 0)
+Library.DropdownSubCont.ScrollBarThickness = 0
+
+Library.UIPadding_3.Parent = Library.DropdownSubCont
+Library.UIPadding_3.PaddingTop = UDim.new(0.0500000007, 0)
+
+Library.UIListLayout_4.Parent = Library.DropdownSubCont
+Library.UIListLayout_4.HorizontalAlignment = Enum.HorizontalAlignment.Center
+Library.UIListLayout_4.SortOrder = Enum.SortOrder.LayoutOrder
+Library.UIListLayout_4.Padding = UDim.new(0.0500000007, 0)
+
+Library.Option.Name = "Option"
+Library.Option.Parent = Library.DropdownSubCont
+Library.Option.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.Option.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.Option.BorderSizePixel = 0
+Library.Option.Position = UDim2.new(0.0410442352, 0, -8.93279335e-08, 0)
+Library.Option.Size = UDim2.new(0.917911649, 0, 0.223943666, 0)
+Library.Option.ZIndex = 15
+
+Library.UICorner_34.Parent = Library.Option
+
+Library.Name_4.Name = "Name"
+Library.Name_4.Parent = Library.Option
+Library.Name_4.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.Name_4.BackgroundTransparency = 1.000
+Library.Name_4.Position = UDim2.new(0.0289997309, 0, 0.167891607, 0)
+Library.Name_4.Size = UDim2.new(0.589159191, 0, 0.660158694, 0)
+Library.Name_4.ZIndex = 15
+Library.Name_4.AutoButtonColor = false
+Library.Name_4.Font = Enum.Font.GothamBold
+Library.Name_4.Text = "Unselected"
+Library.Name_4.TextColor3 = Color3.fromRGB(157, 157, 157)
+Library.Name_4.TextScaled = true
+Library.Name_4.TextSize = 20.000
+Library.Name_4.TextWrapped = true
+Library.Name_4.TextXAlignment = Enum.TextXAlignment.Left
+
+Library.UICorner_35.CornerRadius = UDim.new(0, 6)
+Library.UICorner_35.Parent = Library.Name_4
+
+Library.Option_2.Name = "Option"
+Library.Option_2.Parent = Library.DropdownSubCont
+Library.Option_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Library.Option_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.Option_2.BorderSizePixel = 0
+Library.Option_2.Position = UDim2.new(0.0410442352, 0, 0.299473166, 0)
+Library.Option_2.Size = UDim2.new(0.917911649, 0, 0.223943591, 0)
+Library.Option_2.ZIndex = 15
+
+Library.UICorner_36.Parent = Library.Option_2
+
+Library.Name_5.Name = "Name"
+Library.Name_5.Parent = Library.Option_2
+Library.Name_5.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.Name_5.BackgroundTransparency = 1.000
+Library.Name_5.Position = UDim2.new(0.0289997309, 0, 0.167891622, 0)
+Library.Name_5.Size = UDim2.new(0.589159191, 0, 0.660158753, 0)
+Library.Name_5.ZIndex = 15
+Library.Name_5.AutoButtonColor = false
+Library.Name_5.Font = Enum.Font.GothamBold
+Library.Name_5.Text = "Selected"
+Library.Name_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+Library.Name_5.TextScaled = true
+Library.Name_5.TextSize = 20.000
+Library.Name_5.TextWrapped = true
+Library.Name_5.TextXAlignment = Enum.TextXAlignment.Left
+
+Library.UICorner_37.CornerRadius = UDim.new(0, 6)
+Library.UICorner_37.Parent = Library.Name_5
+
+Library.Check.Name = "Check"
+Library.Check.Parent = Library.Option_2
+Library.Check.BackgroundTransparency = 1.000
+Library.Check.BorderSizePixel = 0
+Library.Check.Position = UDim2.new(0.889998436, 0, 0.0999984518, 0)
+Library.Check.Size = UDim2.new(0.800000012, 0, 0.800000012, 0)
+Library.Check.ZIndex = 155
+Library.Check.Image = "http://www.roblox.com/asset/?id=6031094667"
+
+Library.UIAspectRatioConstraint_9.Parent = Library.Check
+
+Library.UIGradient_6.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(106, 0, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(32, 22, 54))}
+Library.UIGradient_6.Rotation = 90
+Library.UIGradient_6.Parent = Library.Option_2
+
+Library.UICorner_38.Parent = Library.DropdownSubCont
+
+Library.Option_3.Name = "Option"
+Library.Option_3.Parent = Library.DropdownSubCont
+Library.Option_3.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.Option_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.Option_3.BorderSizePixel = 0
+Library.Option_3.Position = UDim2.new(0.0410442352, 0, -8.93279335e-08, 0)
+Library.Option_3.Size = UDim2.new(0.917911649, 0, 0.223943666, 0)
+Library.Option_3.ZIndex = 15
+
+Library.UICorner_39.Parent = Library.Option_3
+
+Library.Name_6.Name = "Name"
+Library.Name_6.Parent = Library.Option_3
+Library.Name_6.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.Name_6.BackgroundTransparency = 1.000
+Library.Name_6.Position = UDim2.new(0.0289997309, 0, 0.167891607, 0)
+Library.Name_6.Size = UDim2.new(0.589159191, 0, 0.660158694, 0)
+Library.Name_6.ZIndex = 15
+Library.Name_6.AutoButtonColor = false
+Library.Name_6.Font = Enum.Font.GothamBold
+Library.Name_6.Text = "Unselected"
+Library.Name_6.TextColor3 = Color3.fromRGB(157, 157, 157)
+Library.Name_6.TextScaled = true
+Library.Name_6.TextSize = 20.000
+Library.Name_6.TextWrapped = true
+Library.Name_6.TextXAlignment = Enum.TextXAlignment.Left
+
+Library.UICorner_40.CornerRadius = UDim.new(0, 6)
+Library.UICorner_40.Parent = Library.Name_6
+
+Library.Option_4.Name = "Option"
+Library.Option_4.Parent = Library.DropdownSubCont
+Library.Option_4.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.Option_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.Option_4.BorderSizePixel = 0
+Library.Option_4.Position = UDim2.new(0.0410442352, 0, -8.93279335e-08, 0)
+Library.Option_4.Size = UDim2.new(0.917911649, 0, 0.223943666, 0)
+Library.Option_4.ZIndex = 15
+
+Library.UICorner_41.Parent = Library.Option_4
+
+Library.Name_7.Name = "Name"
+Library.Name_7.Parent = Library.Option_4
+Library.Name_7.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.Name_7.BackgroundTransparency = 1.000
+Library.Name_7.Position = UDim2.new(0.0289997309, 0, 0.167891607, 0)
+Library.Name_7.Size = UDim2.new(0.589159191, 0, 0.660158694, 0)
+Library.Name_7.ZIndex = 15
+Library.Name_7.AutoButtonColor = false
+Library.Name_7.Font = Enum.Font.GothamBold
+Library.Name_7.Text = "Unselected"
+Library.Name_7.TextColor3 = Color3.fromRGB(157, 157, 157)
+Library.Name_7.TextScaled = true
+Library.Name_7.TextSize = 20.000
+Library.Name_7.TextWrapped = true
+Library.Name_7.TextXAlignment = Enum.TextXAlignment.Left
+
+Library.UICorner_42.CornerRadius = UDim.new(0, 6)
+Library.UICorner_42.Parent = Library.Name_7
+
+Library.Option_5.Name = "Option"
+Library.Option_5.Parent = Library.DropdownSubCont
+Library.Option_5.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.Option_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.Option_5.BorderSizePixel = 0
+Library.Option_5.Position = UDim2.new(0.0410442352, 0, -8.93279335e-08, 0)
+Library.Option_5.Size = UDim2.new(0.917911649, 0, 0.223943666, 0)
+Library.Option_5.ZIndex = 15
+
+Library.UICorner_43.Parent = Library.Option_5
+
+Library.Name_8.Name = "Name"
+Library.Name_8.Parent = Library.Option_5
+Library.Name_8.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.Name_8.BackgroundTransparency = 1.000
+Library.Name_8.Position = UDim2.new(0.0289997309, 0, 0.167891607, 0)
+Library.Name_8.Size = UDim2.new(0.589159191, 0, 0.660158694, 0)
+Library.Name_8.ZIndex = 15
+Library.Name_8.AutoButtonColor = false
+Library.Name_8.Font = Enum.Font.GothamBold
+Library.Name_8.Text = "Unselected"
+Library.Name_8.TextColor3 = Color3.fromRGB(157, 157, 157)
+Library.Name_8.TextScaled = true
+Library.Name_8.TextSize = 20.000
+Library.Name_8.TextWrapped = true
+Library.Name_8.TextXAlignment = Enum.TextXAlignment.Left
+
+Library.UICorner_44.CornerRadius = UDim.new(0, 6)
+Library.UICorner_44.Parent = Library.Name_8
+
+Library.ColorPickerCont.Name = "ColorPickerCont"
+Library.ColorPickerCont.Parent = Library.FeatureContainer_2
+Library.ColorPickerCont.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+Library.ColorPickerCont.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.ColorPickerCont.BorderSizePixel = 0
+Library.ColorPickerCont.Position = UDim2.new(0.0664457083, 0, 0.333408058, 0)
+Library.ColorPickerCont.Size = UDim2.new(0.867108703, 0, 0.605674386, 0)
+
+Library.UICorner_45.Parent = Library.ColorPickerCont
+
+Library.ToggleText_2.Name = "ToggleText"
+Library.ToggleText_2.Parent = Library.ColorPickerCont
+Library.ToggleText_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Library.ToggleText_2.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.ToggleText_2.BackgroundTransparency = 1.000
+Library.ToggleText_2.Position = UDim2.new(0.324999988, 0, 0.100000001, 0)
+Library.ToggleText_2.Size = UDim2.new(0.569000006, 0, 0.100000001, 0)
+Library.ToggleText_2.AutoButtonColor = false
+Library.ToggleText_2.Font = Enum.Font.Gotham
+Library.ToggleText_2.Text = "Color Picker"
+Library.ToggleText_2.TextColor3 = Color3.fromRGB(157, 157, 157)
+Library.ToggleText_2.TextScaled = true
+Library.ToggleText_2.TextSize = 15.000
+Library.ToggleText_2.TextWrapped = true
+Library.ToggleText_2.TextXAlignment = Enum.TextXAlignment.Left
+
+Library.UICorner_46.CornerRadius = UDim.new(0, 6)
+Library.UICorner_46.Parent = Library.ToggleText_2
+
+Library.DropdownImage_2.Name = "DropdownImage"
+Library.DropdownImage_2.Parent = Library.ColorPickerCont
+Library.DropdownImage_2.BackgroundTransparency = 1.000
+Library.DropdownImage_2.BorderSizePixel = 0
+Library.DropdownImage_2.Position = UDim2.new(0.878069222, 0, 0.0208122842, 0)
+Library.DropdownImage_2.Rotation = 180.000
+Library.DropdownImage_2.Size = UDim2.new(0.0926472023, 0, 0.747345328, 0)
+Library.DropdownImage_2.Image = "http://www.roblox.com/asset/?id=6034818372"
+Library.DropdownImage_2.ImageColor3 = Color3.fromRGB(194, 194, 194)
+
+Library.UIAspectRatioConstraint_10.Parent = Library.DropdownImage_2
+
+Library.DropdownButton_2.Name = "DropdownButton"
+Library.DropdownButton_2.Parent = Library.DropdownImage_2
+Library.DropdownButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Library.DropdownButton_2.BackgroundTransparency = 1.000
+Library.DropdownButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.DropdownButton_2.BorderSizePixel = 0
+Library.DropdownButton_2.Size = UDim2.new(1, 0, 1, 0)
+Library.DropdownButton_2.Font = Enum.Font.SourceSans
+Library.DropdownButton_2.Text = ""
+Library.DropdownButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Library.DropdownButton_2.TextSize = 14.000
+
+Library.UIAspectRatioConstraint_11.Parent = Library.ToggleWindow
+
+Library.Title.Name = "Title"
+Library.Title.Parent = Library.ToggleWindow
+Library.Title.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+Library.Title.BackgroundTransparency = 1.000
+Library.Title.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Library.Title.Position = UDim2.new(0.246149391, 0, 0.043499995, 0)
+Library.Title.Selectable = true
+Library.Title.Size = UDim2.new(0.500126362, 0, 0.0907190964, 0)
+Library.Title.Font = Enum.Font.Gotham
+Library.Title.Text = "Example"
+Library.Title.TextColor3 = Color3.fromRGB(173, 173, 173)
+Library.Title.TextScaled = true
+Library.Title.TextWrapped = true
+
+Library.UICorner_47.CornerRadius = UDim.new(0, 6)
+Library.UICorner_47.Parent = Library.Title
+
+Library.ButtonWindow.Name = "ButtonWindow"
+Library.ButtonWindow.Parent = Library.Library
+Library.ButtonWindow.AnchorPoint = Vector2.new(0.5, 0)
+Library.ButtonWindow.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Library.ButtonWindow.BorderSizePixel = 0
+Library.ButtonWindow.Position = UDim2.new(0.728326023, 0, 0.389000028, 0)
+Library.ButtonWindow.Size = UDim2.new(0.237207398, 0, 0.434482902, 0)
+
+Library.UICorner_48.CornerRadius = UDim.new(0, 12)
+Library.UICorner_48.Parent = Library.ButtonWindow
+
+Library.FeatureContainer_3.Name = "FeatureContainer"
+Library.FeatureContainer_3.Parent = Library.ButtonWindow
+Library.FeatureContainer_3.Active = true
+Library.FeatureContainer_3.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Library.FeatureContainer_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.FeatureContainer_3.BorderSizePixel = 0
+Library.FeatureContainer_3.Position = UDim2.new(0.0619448386, 0, 0.173616573, 0)
+Library.FeatureContainer_3.Size = UDim2.new(0.863000035, 0, 0.640144408, 0)
+Library.FeatureContainer_3.CanvasSize = UDim2.new(0, 0, 1, 0)
+Library.FeatureContainer_3.ScrollBarThickness = 0
+
+Library.UICorner_49.CornerRadius = UDim.new(0, 12)
+Library.UICorner_49.Parent = Library.FeatureContainer_3
+
+Library.UIListLayout_5.Parent = Library.FeatureContainer_3
+Library.UIListLayout_5.HorizontalAlignment = Enum.HorizontalAlignment.Center
+Library.UIListLayout_5.SortOrder = Enum.SortOrder.LayoutOrder
+Library.UIListLayout_5.Padding = UDim.new(0.0299999993, 0)
+
+Library.UIPadding_4.Parent = Library.FeatureContainer_3
+Library.UIPadding_4.PaddingTop = UDim.new(0.0500000007, 0)
+
+Library.SliderCont_2.Name = "SliderCont"
+Library.SliderCont_2.Parent = Library.FeatureContainer_3
+Library.SliderCont_2.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+Library.SliderCont_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.SliderCont_2.BorderSizePixel = 0
+Library.SliderCont_2.Position = UDim2.new(0.0664456859, 0, 0.0323860124, 0)
+Library.SliderCont_2.Size = UDim2.new(0.867108643, 0, 0.163161293, 0)
+
+Library.UICorner_50.Parent = Library.SliderCont_2
+
+Library.SliderBackground_2.Name = "SliderBackground"
+Library.SliderBackground_2.Parent = Library.SliderCont_2
+Library.SliderBackground_2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Library.SliderBackground_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.SliderBackground_2.BorderSizePixel = 0
+Library.SliderBackground_2.Position = UDim2.new(0.0367861241, 0, 0.641297579, 0)
+Library.SliderBackground_2.Size = UDim2.new(0.923382223, 0, 0.170000002, 0)
+
+Library.Fill_2.Name = "Fill"
+Library.Fill_2.Parent = Library.SliderBackground_2
+Library.Fill_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Library.Fill_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.Fill_2.BorderSizePixel = 0
+Library.Fill_2.Size = UDim2.new(0.5, 0, 1, 0)
+
+Library.UICorner_51.CornerRadius = UDim.new(1, 0)
+Library.UICorner_51.Parent = Library.Fill_2
+
+Library.UIGradient_7.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(106, 0, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(32, 22, 54))}
+Library.UIGradient_7.Rotation = 90
+Library.UIGradient_7.Parent = Library.Fill_2
+
+Library.UICorner_52.CornerRadius = UDim.new(1, 0)
+Library.UICorner_52.Parent = Library.SliderBackground_2
+
+Library.TextButton_2.Parent = Library.SliderBackground_2
+Library.TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Library.TextButton_2.BackgroundTransparency = 1.000
+Library.TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.TextButton_2.BorderSizePixel = 0
+Library.TextButton_2.Size = UDim2.new(1, 0, 1, 0)
+Library.TextButton_2.Font = Enum.Font.SourceSans
+Library.TextButton_2.Text = ""
+Library.TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Library.TextButton_2.TextSize = 14.000
+
+Library.NumberText_2.Name = "NumberText"
+Library.NumberText_2.Parent = Library.SliderCont_2
+Library.NumberText_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Library.NumberText_2.BackgroundTransparency = 1.000
+Library.NumberText_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.NumberText_2.BorderSizePixel = 0
+Library.NumberText_2.Position = UDim2.new(0.726315081, 0, 0.17899999, 0)
+Library.NumberText_2.Size = UDim2.new(0.230000004, 0, 0.264999986, 0)
+Library.NumberText_2.Font = Enum.Font.Gotham
+Library.NumberText_2.PlaceholderColor3 = Color3.fromRGB(157, 157, 157)
+Library.NumberText_2.Text = "67 studs"
+Library.NumberText_2.TextColor3 = Color3.fromRGB(157, 157, 157)
+Library.NumberText_2.TextScaled = true
+Library.NumberText_2.TextSize = 14.000
+Library.NumberText_2.TextWrapped = true
+Library.NumberText_2.TextXAlignment = Enum.TextXAlignment.Right
+
+Library.UICorner_53.CornerRadius = UDim.new(0, 6)
+Library.UICorner_53.Parent = Library.NumberText_2
+
+Library.SliderClickDetection_2.Name = "SliderClickDetection"
+Library.SliderClickDetection_2.Parent = Library.SliderCont_2
+Library.SliderClickDetection_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Library.SliderClickDetection_2.BackgroundTransparency = 1.000
+Library.SliderClickDetection_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.SliderClickDetection_2.BorderSizePixel = 0
+Library.SliderClickDetection_2.Size = UDim2.new(1, 0, 1, 0)
+Library.SliderClickDetection_2.ZIndex = 2
+Library.SliderClickDetection_2.Font = Enum.Font.SourceSans
+Library.SliderClickDetection_2.Text = ""
+Library.SliderClickDetection_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Library.SliderClickDetection_2.TextSize = 14.000
+
+Library.SliderText_2.Name = "SliderText"
+Library.SliderText_2.Parent = Library.SliderCont_2
+Library.SliderText_2.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.SliderText_2.BackgroundTransparency = 1.000
+Library.SliderText_2.Position = UDim2.new(0.0398632847, 0, 0.135777652, 0)
+Library.SliderText_2.Size = UDim2.new(0.667201817, 0, 0.360899746, 0)
+Library.SliderText_2.AutoButtonColor = false
+Library.SliderText_2.Font = Enum.Font.Gotham
+Library.SliderText_2.Text = "Slider"
+Library.SliderText_2.TextColor3 = Color3.fromRGB(157, 157, 157)
+Library.SliderText_2.TextScaled = true
+Library.SliderText_2.TextSize = 15.000
+Library.SliderText_2.TextWrapped = true
+Library.SliderText_2.TextXAlignment = Enum.TextXAlignment.Left
+
+Library.UICorner_54.CornerRadius = UDim.new(0, 6)
+Library.UICorner_54.Parent = Library.SliderText_2
+
+Library.ToggleCont_2.Name = "ToggleCont"
+Library.ToggleCont_2.Parent = Library.FeatureContainer_3
+Library.ToggleCont_2.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+Library.ToggleCont_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.ToggleCont_2.BorderSizePixel = 0
+Library.ToggleCont_2.Position = UDim2.new(0.0664457604, 0, 0.426592648, 0)
+Library.ToggleCont_2.Size = UDim2.new(0.867108762, 0, 0.120705128, 0)
+
+Library.UICorner_55.Parent = Library.ToggleCont_2
+
+Library.ToggleText_3.Name = "ToggleText"
+Library.ToggleText_3.Parent = Library.ToggleCont_2
+Library.ToggleText_3.AnchorPoint = Vector2.new(0.5, 0.5)
+Library.ToggleText_3.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.ToggleText_3.BackgroundTransparency = 1.000
+Library.ToggleText_3.Position = UDim2.new(0.324971646, 0, 0.49999994, 0)
+Library.ToggleText_3.Size = UDim2.new(0.569408953, 0, 0.517574847, 0)
+Library.ToggleText_3.AutoButtonColor = false
+Library.ToggleText_3.Font = Enum.Font.Gotham
+Library.ToggleText_3.Text = "Window Toggle"
+Library.ToggleText_3.TextColor3 = Color3.fromRGB(157, 157, 157)
+Library.ToggleText_3.TextScaled = true
+Library.ToggleText_3.TextSize = 15.000
+Library.ToggleText_3.TextWrapped = true
+Library.ToggleText_3.TextXAlignment = Enum.TextXAlignment.Left
+
+Library.UICorner_56.CornerRadius = UDim.new(0, 6)
+Library.UICorner_56.Parent = Library.ToggleText_3
+
+Library.Toggle_4.Name = "Toggle"
+Library.Toggle_4.Parent = Library.ToggleCont_2
+Library.Toggle_4.AnchorPoint = Vector2.new(0.5, 0.5)
+Library.Toggle_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Library.Toggle_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.Toggle_4.BorderSizePixel = 0
+Library.Toggle_4.Position = UDim2.new(0.899999976, 0, 0.5, 0)
+Library.Toggle_4.Size = UDim2.new(0.132702976, 0, 0.560301363, 0)
+
+Library.UICorner_57.CornerRadius = UDim.new(1, 0)
+Library.UICorner_57.Parent = Library.Toggle_4
+
+Library.ToggleDot_4.Name = "ToggleDot"
+Library.ToggleDot_4.Parent = Library.Toggle_4
+Library.ToggleDot_4.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
+Library.ToggleDot_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.ToggleDot_4.BorderSizePixel = 0
+Library.ToggleDot_4.Position = UDim2.new(0.550000012, 0, 0.0869999975, 0)
+Library.ToggleDot_4.Size = UDim2.new(0.403407961, 0, 0.806819499, 0)
+
+Library.UIAspectRatioConstraint_12.Parent = Library.ToggleDot_4
+
+Library.UICorner_58.CornerRadius = UDim.new(1, 0)
+Library.UICorner_58.Parent = Library.ToggleDot_4
+
+Library.ToggleBtn_4.Name = "ToggleBtn"
+Library.ToggleBtn_4.Parent = Library.Toggle_4
+Library.ToggleBtn_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Library.ToggleBtn_4.BackgroundTransparency = 1.000
+Library.ToggleBtn_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.ToggleBtn_4.BorderSizePixel = 0
+Library.ToggleBtn_4.Size = UDim2.new(1, 0, 1, 0)
+Library.ToggleBtn_4.Font = Enum.Font.SourceSans
+Library.ToggleBtn_4.Text = ""
+Library.ToggleBtn_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+Library.ToggleBtn_4.TextSize = 14.000
+Library.ToggleBtn_4.TextTransparency = 1.000
+
+Library.UIAspectRatioConstraint_13.Parent = Library.Toggle_4
+Library.UIAspectRatioConstraint_13.AspectRatio = 2.000
+
+Library.UIGradient_8.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(106, 0, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(32, 22, 54))}
+Library.UIGradient_8.Rotation = 90
+Library.UIGradient_8.Parent = Library.Toggle_4
+
+Library.DropdownCont_2.Name = "DropdownCont"
+Library.DropdownCont_2.Parent = Library.FeatureContainer_3
+Library.DropdownCont_2.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+Library.DropdownCont_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.DropdownCont_2.BorderSizePixel = 0
+Library.DropdownCont_2.Position = UDim2.new(0.0664457604, 0, 0.426592648, 0)
+Library.DropdownCont_2.Size = UDim2.new(0.866999984, 0, 0.115000002, 0)
+
+Library.UICorner_59.Parent = Library.DropdownCont_2
+
+Library.DropdownText_2.Name = "DropdownText"
+Library.DropdownText_2.Parent = Library.DropdownCont_2
+Library.DropdownText_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Library.DropdownText_2.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.DropdownText_2.BackgroundTransparency = 1.000
+Library.DropdownText_2.Position = UDim2.new(0.27092272, 0, 0.499999762, 0)
+Library.DropdownText_2.Size = UDim2.new(0.461310029, 0, 0.517574847, 0)
+Library.DropdownText_2.AutoButtonColor = false
+Library.DropdownText_2.Font = Enum.Font.Gotham
+Library.DropdownText_2.Text = "Dropdown"
+Library.DropdownText_2.TextColor3 = Color3.fromRGB(157, 157, 157)
+Library.DropdownText_2.TextScaled = true
+Library.DropdownText_2.TextSize = 15.000
+Library.DropdownText_2.TextWrapped = true
+Library.DropdownText_2.TextXAlignment = Enum.TextXAlignment.Left
+
+Library.UICorner_60.CornerRadius = UDim.new(0, 6)
+Library.UICorner_60.Parent = Library.DropdownText_2
+
+Library.DropdownImage_3.Name = "DropdownImage"
+Library.DropdownImage_3.Parent = Library.DropdownCont_2
+Library.DropdownImage_3.BackgroundTransparency = 1.000
+Library.DropdownImage_3.BorderSizePixel = 0
+Library.DropdownImage_3.Position = UDim2.new(0.885795295, 0, 0.107260592, 0)
+Library.DropdownImage_3.Size = UDim2.new(0.0926472023, 0, 0.747345328, 0)
+Library.DropdownImage_3.Image = "http://www.roblox.com/asset/?id=6034818372"
+Library.DropdownImage_3.ImageColor3 = Color3.fromRGB(194, 194, 194)
+
+Library.UIAspectRatioConstraint_14.Parent = Library.DropdownImage_3
+
+Library.DropdownButton_3.Name = "DropdownButton"
+Library.DropdownButton_3.Parent = Library.DropdownImage_3
+Library.DropdownButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Library.DropdownButton_3.BackgroundTransparency = 1.000
+Library.DropdownButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.DropdownButton_3.BorderSizePixel = 0
+Library.DropdownButton_3.Size = UDim2.new(1, 0, 1, 0)
+Library.DropdownButton_3.Font = Enum.Font.SourceSans
+Library.DropdownButton_3.Text = ""
+Library.DropdownButton_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Library.DropdownButton_3.TextSize = 14.000
+
+Library.DropdownSubCont_2.Name = "DropdownSubCont"
+Library.DropdownSubCont_2.Parent = Library.DropdownCont_2
+Library.DropdownSubCont_2.Active = true
+Library.DropdownSubCont_2.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+Library.DropdownSubCont_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.DropdownSubCont_2.BorderSizePixel = 0
+Library.DropdownSubCont_2.Position = UDim2.new(0, 0, 1.27700162, 0)
+Library.DropdownSubCont_2.Size = UDim2.new(1.00199997, 0, 3.47201586, 0)
+Library.DropdownSubCont_2.Visible = false
+Library.DropdownSubCont_2.ZIndex = 15
+Library.DropdownSubCont_2.CanvasSize = UDim2.new(0, 0, 1, 0)
+Library.DropdownSubCont_2.ScrollBarThickness = 0
+
+Library.UIPadding_5.Parent = Library.DropdownSubCont_2
+Library.UIPadding_5.PaddingTop = UDim.new(0.0500000007, 0)
+
+Library.UIListLayout_6.Parent = Library.DropdownSubCont_2
+Library.UIListLayout_6.HorizontalAlignment = Enum.HorizontalAlignment.Center
+Library.UIListLayout_6.SortOrder = Enum.SortOrder.LayoutOrder
+Library.UIListLayout_6.Padding = UDim.new(0.0500000007, 0)
+
+Library.Option_6.Name = "Option"
+Library.Option_6.Parent = Library.DropdownSubCont_2
+Library.Option_6.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.Option_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.Option_6.BorderSizePixel = 0
+Library.Option_6.Position = UDim2.new(0.0410442352, 0, -8.93279335e-08, 0)
+Library.Option_6.Size = UDim2.new(0.917911649, 0, 0.223943666, 0)
+Library.Option_6.ZIndex = 15
+
+Library.UICorner_61.Parent = Library.Option_6
+
+Library.Name_9.Name = "Name"
+Library.Name_9.Parent = Library.Option_6
+Library.Name_9.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.Name_9.BackgroundTransparency = 1.000
+Library.Name_9.Position = UDim2.new(0.0289997309, 0, 0.167891607, 0)
+Library.Name_9.Size = UDim2.new(0.589159191, 0, 0.660158694, 0)
+Library.Name_9.ZIndex = 15
+Library.Name_9.AutoButtonColor = false
+Library.Name_9.Font = Enum.Font.GothamBold
+Library.Name_9.Text = "Unselected"
+Library.Name_9.TextColor3 = Color3.fromRGB(157, 157, 157)
+Library.Name_9.TextScaled = true
+Library.Name_9.TextSize = 20.000
+Library.Name_9.TextWrapped = true
+Library.Name_9.TextXAlignment = Enum.TextXAlignment.Left
+
+Library.UICorner_62.CornerRadius = UDim.new(0, 6)
+Library.UICorner_62.Parent = Library.Name_9
+
+Library.Option_7.Name = "Option"
+Library.Option_7.Parent = Library.DropdownSubCont_2
+Library.Option_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Library.Option_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.Option_7.BorderSizePixel = 0
+Library.Option_7.Position = UDim2.new(0.0410442352, 0, 0.299473166, 0)
+Library.Option_7.Size = UDim2.new(0.917911649, 0, 0.223943591, 0)
+Library.Option_7.ZIndex = 15
+
+Library.UICorner_63.Parent = Library.Option_7
+
+Library.Name_10.Name = "Name"
+Library.Name_10.Parent = Library.Option_7
+Library.Name_10.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.Name_10.BackgroundTransparency = 1.000
+Library.Name_10.Position = UDim2.new(0.0289997309, 0, 0.167891622, 0)
+Library.Name_10.Size = UDim2.new(0.589159191, 0, 0.660158753, 0)
+Library.Name_10.ZIndex = 15
+Library.Name_10.AutoButtonColor = false
+Library.Name_10.Font = Enum.Font.GothamBold
+Library.Name_10.Text = "Selected"
+Library.Name_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+Library.Name_10.TextScaled = true
+Library.Name_10.TextSize = 20.000
+Library.Name_10.TextWrapped = true
+Library.Name_10.TextXAlignment = Enum.TextXAlignment.Left
+
+Library.UICorner_64.CornerRadius = UDim.new(0, 6)
+Library.UICorner_64.Parent = Library.Name_10
+
+Library.Check_2.Name = "Check"
+Library.Check_2.Parent = Library.Option_7
+Library.Check_2.BackgroundTransparency = 1.000
+Library.Check_2.BorderSizePixel = 0
+Library.Check_2.Position = UDim2.new(0.889998436, 0, 0.0999984518, 0)
+Library.Check_2.Size = UDim2.new(0.800000012, 0, 0.800000012, 0)
+Library.Check_2.ZIndex = 155
+Library.Check_2.Image = "http://www.roblox.com/asset/?id=6031094667"
+
+Library.UIAspectRatioConstraint_15.Parent = Library.Check_2
+
+Library.UIGradient_9.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(106, 0, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(32, 22, 54))}
+Library.UIGradient_9.Rotation = 90
+Library.UIGradient_9.Parent = Library.Option_7
+
+Library.UICorner_65.Parent = Library.DropdownSubCont_2
+
+Library.Option_8.Name = "Option"
+Library.Option_8.Parent = Library.DropdownSubCont_2
+Library.Option_8.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.Option_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.Option_8.BorderSizePixel = 0
+Library.Option_8.Position = UDim2.new(0.0410442352, 0, -8.93279335e-08, 0)
+Library.Option_8.Size = UDim2.new(0.917911649, 0, 0.223943666, 0)
+Library.Option_8.ZIndex = 15
+
+Library.UICorner_66.Parent = Library.Option_8
+
+Library.Name_11.Name = "Name"
+Library.Name_11.Parent = Library.Option_8
+Library.Name_11.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.Name_11.BackgroundTransparency = 1.000
+Library.Name_11.Position = UDim2.new(0.0289997309, 0, 0.167891607, 0)
+Library.Name_11.Size = UDim2.new(0.589159191, 0, 0.660158694, 0)
+Library.Name_11.ZIndex = 15
+Library.Name_11.AutoButtonColor = false
+Library.Name_11.Font = Enum.Font.GothamBold
+Library.Name_11.Text = "Unselected"
+Library.Name_11.TextColor3 = Color3.fromRGB(157, 157, 157)
+Library.Name_11.TextScaled = true
+Library.Name_11.TextSize = 20.000
+Library.Name_11.TextWrapped = true
+Library.Name_11.TextXAlignment = Enum.TextXAlignment.Left
+
+Library.UICorner_67.CornerRadius = UDim.new(0, 6)
+Library.UICorner_67.Parent = Library.Name_11
+
+Library.Option_9.Name = "Option"
+Library.Option_9.Parent = Library.DropdownSubCont_2
+Library.Option_9.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.Option_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.Option_9.BorderSizePixel = 0
+Library.Option_9.Position = UDim2.new(0.0410442352, 0, -8.93279335e-08, 0)
+Library.Option_9.Size = UDim2.new(0.917911649, 0, 0.223943666, 0)
+Library.Option_9.ZIndex = 15
+
+Library.UICorner_68.Parent = Library.Option_9
+
+Library.Name_12.Name = "Name"
+Library.Name_12.Parent = Library.Option_9
+Library.Name_12.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.Name_12.BackgroundTransparency = 1.000
+Library.Name_12.Position = UDim2.new(0.0289997309, 0, 0.167891607, 0)
+Library.Name_12.Size = UDim2.new(0.589159191, 0, 0.660158694, 0)
+Library.Name_12.ZIndex = 15
+Library.Name_12.AutoButtonColor = false
+Library.Name_12.Font = Enum.Font.GothamBold
+Library.Name_12.Text = "Unselected"
+Library.Name_12.TextColor3 = Color3.fromRGB(157, 157, 157)
+Library.Name_12.TextScaled = true
+Library.Name_12.TextSize = 20.000
+Library.Name_12.TextWrapped = true
+Library.Name_12.TextXAlignment = Enum.TextXAlignment.Left
+
+Library.UICorner_69.CornerRadius = UDim.new(0, 6)
+Library.UICorner_69.Parent = Library.Name_12
+
+Library.Option_10.Name = "Option"
+Library.Option_10.Parent = Library.DropdownSubCont_2
+Library.Option_10.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.Option_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.Option_10.BorderSizePixel = 0
+Library.Option_10.Position = UDim2.new(0.0410442352, 0, -8.93279335e-08, 0)
+Library.Option_10.Size = UDim2.new(0.917911649, 0, 0.223943666, 0)
+Library.Option_10.ZIndex = 15
+
+Library.UICorner_70.Parent = Library.Option_10
+
+Library.Name_13.Name = "Name"
+Library.Name_13.Parent = Library.Option_10
+Library.Name_13.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.Name_13.BackgroundTransparency = 1.000
+Library.Name_13.Position = UDim2.new(0.0289997309, 0, 0.167891607, 0)
+Library.Name_13.Size = UDim2.new(0.589159191, 0, 0.660158694, 0)
+Library.Name_13.ZIndex = 15
+Library.Name_13.AutoButtonColor = false
+Library.Name_13.Font = Enum.Font.GothamBold
+Library.Name_13.Text = "Unselected"
+Library.Name_13.TextColor3 = Color3.fromRGB(157, 157, 157)
+Library.Name_13.TextScaled = true
+Library.Name_13.TextSize = 20.000
+Library.Name_13.TextWrapped = true
+Library.Name_13.TextXAlignment = Enum.TextXAlignment.Left
+
+Library.UICorner_71.CornerRadius = UDim.new(0, 6)
+Library.UICorner_71.Parent = Library.Name_13
+
+Library.ColorPickerCont_2.Name = "ColorPickerCont"
+Library.ColorPickerCont_2.Parent = Library.FeatureContainer_3
+Library.ColorPickerCont_2.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+Library.ColorPickerCont_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.ColorPickerCont_2.BorderSizePixel = 0
+Library.ColorPickerCont_2.Position = UDim2.new(0.0664457083, 0, 0.333408058, 0)
+Library.ColorPickerCont_2.Size = UDim2.new(0.867108703, 0, 0.605674386, 0)
+
+Library.UICorner_72.Parent = Library.ColorPickerCont_2
+
+Library.ToggleText_4.Name = "ToggleText"
+Library.ToggleText_4.Parent = Library.ColorPickerCont_2
+Library.ToggleText_4.AnchorPoint = Vector2.new(0.5, 0.5)
+Library.ToggleText_4.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Library.ToggleText_4.BackgroundTransparency = 1.000
+Library.ToggleText_4.Position = UDim2.new(0.324999988, 0, 0.100000001, 0)
+Library.ToggleText_4.Size = UDim2.new(0.569000006, 0, 0.100000001, 0)
+Library.ToggleText_4.AutoButtonColor = false
+Library.ToggleText_4.Font = Enum.Font.Gotham
+Library.ToggleText_4.Text = "Color Picker"
+Library.ToggleText_4.TextColor3 = Color3.fromRGB(157, 157, 157)
+Library.ToggleText_4.TextScaled = true
+Library.ToggleText_4.TextSize = 15.000
+Library.ToggleText_4.TextWrapped = true
+Library.ToggleText_4.TextXAlignment = Enum.TextXAlignment.Left
+
+Library.UICorner_73.CornerRadius = UDim.new(0, 6)
+Library.UICorner_73.Parent = Library.ToggleText_4
+
+Library.DropdownImage_4.Name = "DropdownImage"
+Library.DropdownImage_4.Parent = Library.ColorPickerCont_2
+Library.DropdownImage_4.BackgroundTransparency = 1.000
+Library.DropdownImage_4.BorderSizePixel = 0
+Library.DropdownImage_4.Position = UDim2.new(0.874203205, 0, 0.013354796, 0)
+Library.DropdownImage_4.Rotation = 180.000
+Library.DropdownImage_4.Size = UDim2.new(0.0926472023, 0, 0.747345328, 0)
+Library.DropdownImage_4.Image = "http://www.roblox.com/asset/?id=6034818372"
+Library.DropdownImage_4.ImageColor3 = Color3.fromRGB(194, 194, 194)
+
+Library.UIAspectRatioConstraint_16.Parent = Library.DropdownImage_4
+
+Library.DropdownButton_4.Name = "DropdownButton"
+Library.DropdownButton_4.Parent = Library.DropdownImage_4
+Library.DropdownButton_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Library.DropdownButton_4.BackgroundTransparency = 1.000
+Library.DropdownButton_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.DropdownButton_4.BorderSizePixel = 0
+Library.DropdownButton_4.Size = UDim2.new(1, 0, 1, 0)
+Library.DropdownButton_4.Font = Enum.Font.SourceSans
+Library.DropdownButton_4.Text = ""
+Library.DropdownButton_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+Library.DropdownButton_4.TextSize = 14.000
+
+Library.UIAspectRatioConstraint_17.Parent = Library.ButtonWindow
+
+Library.Title_2.Name = "Title"
+Library.Title_2.Parent = Library.ButtonWindow
+Library.Title_2.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+Library.Title_2.BackgroundTransparency = 1.000
+Library.Title_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Library.Title_2.Position = UDim2.new(0.246149391, 0, 0.043499995, 0)
+Library.Title_2.Selectable = true
+Library.Title_2.Size = UDim2.new(0.500126362, 0, 0.0907190964, 0)
+Library.Title_2.Font = Enum.Font.Gotham
+Library.Title_2.Text = "Example"
+Library.Title_2.TextColor3 = Color3.fromRGB(173, 173, 173)
+Library.Title_2.TextScaled = true
+Library.Title_2.TextWrapped = true
+
+Library.UICorner_74.CornerRadius = UDim.new(0, 6)
+Library.UICorner_74.Parent = Library.Title_2
+
+Library.MainButton.Name = "MainButton"
+Library.MainButton.Parent = Library.ButtonWindow
+Library.MainButton.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+Library.MainButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.MainButton.BorderSizePixel = 0
+Library.MainButton.Position = UDim2.new(0.0588560961, 0, 0.853080511, 0)
+Library.MainButton.Size = UDim2.new(0.563518167, 0, 0.0888736695, 0)
+Library.MainButton.AutoButtonColor = false
+Library.MainButton.Font = Enum.Font.SourceSans
+Library.MainButton.Text = ""
+Library.MainButton.TextColor3 = Color3.fromRGB(200, 200, 200)
+Library.MainButton.TextSize = 14.000
+
+Library.UICorner_75.Parent = Library.MainButton
+
+Library.TextLabel.Parent = Library.MainButton
+Library.TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+Library.TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Library.TextLabel.BackgroundTransparency = 1.000
+Library.TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.TextLabel.BorderSizePixel = 0
+Library.TextLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
+Library.TextLabel.Size = UDim2.new(0.5, 0, 0.449999988, 0)
+Library.TextLabel.Font = Enum.Font.Gotham
+Library.TextLabel.Text = "Execute"
+Library.TextLabel.TextColor3 = Color3.fromRGB(173, 173, 173)
+Library.TextLabel.TextScaled = true
+Library.TextLabel.TextSize = 14.000
+Library.TextLabel.TextWrapped = true
+
+Library.KeybindButton.Name = "KeybindButton"
+Library.KeybindButton.Parent = Library.ButtonWindow
+Library.KeybindButton.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+Library.KeybindButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.KeybindButton.BorderSizePixel = 0
+Library.KeybindButton.Position = UDim2.new(0.648394585, 0, 0.853080511, 0)
+Library.KeybindButton.Size = UDim2.new(0.276549935, 0, 0.0888736695, 0)
+Library.KeybindButton.AutoButtonColor = false
+Library.KeybindButton.Font = Enum.Font.SourceSans
+Library.KeybindButton.Text = ""
+Library.KeybindButton.TextColor3 = Color3.fromRGB(200, 200, 200)
+Library.KeybindButton.TextSize = 14.000
+
+Library.UICorner_76.Parent = Library.KeybindButton
+
+Library.TextLabel_2.Parent = Library.KeybindButton
+Library.TextLabel_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Library.TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Library.TextLabel_2.BackgroundTransparency = 1.000
+Library.TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Library.TextLabel_2.BorderSizePixel = 0
+Library.TextLabel_2.Position = UDim2.new(0.5, 0, 0.499999672, 0)
+Library.TextLabel_2.Size = UDim2.new(1, 0, 0.449999988, 0)
+Library.TextLabel_2.Font = Enum.Font.Gotham
+Library.TextLabel_2.Text = "Set Bind"
+Library.TextLabel_2.TextColor3 = Color3.fromRGB(173, 173, 173)
+Library.TextLabel_2.TextScaled = true
+Library.TextLabel_2.TextSize = 14.000
+Library.TextLabel_2.TextWrapped = true
