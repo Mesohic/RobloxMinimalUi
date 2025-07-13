@@ -208,6 +208,70 @@ function UILibrary:CreateWindow(title)
     
     -- Section counter for ordering
     local sectionCount = 0
+
+    -- Mobile-friendly dragging
+local dragButton = Instance.new("ImageButton")
+dragButton.Size = UDim2.new(0, 30, 0, 30)
+dragButton.Position = UDim2.new(1, -105, 0, 5)
+dragButton.BackgroundColor3 = COLORS.SECTION
+dragButton.BorderSizePixel = 0
+dragButton.Image = "rbxassetid://7733715400" -- Drag handle icon (you can replace with your own)
+dragButton.ImageColor3 = COLORS.TEXT
+dragButton.Transparency = 0.5
+dragButton.Parent = titleBar
+createCorner(dragButton, 6)
+
+-- Mobile dragging functionality
+local function updateDrag(input)
+    local delta = input.Position - dragStart
+    main.Position = UDim2.new(
+        startPos.X.Scale,
+        startPos.X.Offset + delta.X,
+        startPos.Y.Scale,
+        startPos.Y.Offset + delta.Y
+    )
+end
+
+dragButton.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.Touch or input.UserInputType == Enum.UserInputType.MouseButton1 then
+        isDragging = true
+        dragStart = input.Position
+        startPos = main.Position
+    end
+end)
+
+dragButton.InputChanged:Connect(function(input)
+    if isDragging and (input.UserInputType == Enum.UserInputType.Touch or input.UserInputType == Enum.UserInputType.MouseMovement) then
+        updateDrag(input)
+    end
+end)
+
+dragButton.InputEnded:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.Touch or input.UserInputType == Enum.UserInputType.MouseButton1 then
+        isDragging = false
+    end
+end)
+
+-- Make sure dragging works with touch on the entire title bar too
+titleBar.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.Touch then
+        isDragging = true
+        dragStart = input.Position
+        startPos = main.Position
+    end
+end)
+
+titleBar.InputChanged:Connect(function(input)
+    if isDragging and input.UserInputType == Enum.UserInputType.Touch then
+        updateDrag(input)
+    end
+end)
+
+titleBar.InputEnded:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.Touch then
+        isDragging = false
+    end
+end)
     
     -- Create sections
     function window:Section(name)
